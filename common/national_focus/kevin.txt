@@ -1,0 +1,2135 @@
+focus_tree = {
+	id = KEV_focus
+	
+	country = {
+		factor = 0
+	
+	
+	    modifier = {
+		    add = 10
+			tag = KEV
+	    }
+		
+		modifier = {
+		    add = 10
+			original_tag = KEV
+	    }
+	}
+	
+	
+	default = no
+	reset_on_civilwar = no
+	
+
+focus = {
+		id = KEV_onze_industrie
+		icon = GFX_goal_generic_production
+		x = 15
+		y = 0.1
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = KEV_nieuwe_fabrieken
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = KEV_onze_industrie }
+		x = 12
+		y = 1
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		671 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+		}
+	 }
+	}
+	
+	focus = {
+		id = KEV_nieuwe_wapen_fabrieken
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = KEV_onze_industrie }
+		x = 18
+		y = 1
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		671 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+		}
+	 }
+   }	
+	focus = {
+		id = KEV_enigma_machines
+		icon = GFX_goal_continuous_non_factory_construct
+		prerequisite = { focus = KEV_nieuwe_fabrieken }
+		x = 13
+		y = 2.5
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	
+	focus = {
+		id = KEV_meer_wapen_fabrieken
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = KEV_nieuwe_wapen_fabrieken }
+		x = 19
+		y = 2.5
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		286 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+		}
+	 }
+	}
+		focus = {
+		id = KEV_strategische_uitbreiding
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = KEV_nieuwe_fabrieken }
+		x = 11
+		y = 2.5
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		671 = {
+                add_extra_state_shared_building_slots = 2
+          }
+        289 = {
+                add_extra_state_shared_building_slots = 2	
+            }
+        741 = {
+                add_extra_state_shared_building_slots = 2
+            }				
+		}
+	 }
+	focus = {
+		id = KEV_vind_nieuwe_designs_uit
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = KEV_nieuwe_wapen_fabrieken }
+		x = 17
+		y = 2.5
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 1
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = KEV_focus_op_de_lichte_industrie
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = KEV_strategische_uitbreiding focus = KEV_enigma_machines }
+		mutually_exclusive = { focus = KEV_focus_op_de_zware_industrie }
+		x = 12
+		y = 3
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		286 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+		}
+	 }
+	}
+	focus = {
+		id = KEV_focus_op_de_zware_industrie
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = KEV_vind_nieuwe_designs_uit focus = KEV_meer_wapen_fabrieken }
+		mutually_exclusive = { focus = KEV_focus_op_de_lichte_industrie }
+		x = 18
+		y = 3
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		671 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = arms_factory
+                    level = 3
+                    instant_build = yes
+                }
+		}
+	 }
+	}
+	focus = {
+		id = KEV_kevchimin_treinwerk
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = KEV_focus_op_de_lichte_industrie focus = KEV_focus_op_de_zware_industrie }
+		x = 16
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		671 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = infrastructure
+                    level = 3
+                    instant_build = yes
+                }
+		}
+	 }
+	}
+	focus = {
+		id = KEV_kevchimin_universiteit
+		icon = GFX_focus_research
+		prerequisite = { focus = KEV_strategische_uitbreiding  focus = KEV_verbeter_onze_synthetische_werken }
+		x = 10
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = KEV_vietnamese_olie_velden
+		icon = GFX_goal_generic_oil_refinery
+		x = 5
+		y = 0
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    add_political_power = 120
+			add_resource = {
+				type = oil
+				amount = 12
+				state = 670
+			}
+		}
+	}
+	
+	focus = {
+		id = KEV_onze_staal_industrie
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = KEV_vietnamese_olie_velden }
+		x = 2
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		       	add_resource = {
+				type = steel
+				amount = 8
+				state = 286
+			}
+		286 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+		}
+	 }
+	}
+	focus = {
+		id = KEV_bouw_meer_staal_fabrieken
+		icon = GFX_focus_NZL_bob_semple_tank
+		prerequisite = { focus = KEV_onze_staal_industrie }
+		x = 1
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		       	add_resource = {
+				type = steel
+				amount = 8
+				state = 286
+			}
+		}
+	}
+	focus = {
+		id = KEV_trein_sporen_voor_staal_handel
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = KEV_bouw_meer_staal_fabrieken }
+		x = 1
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		286 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		671 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+		}
+	  }
+	}
+	focus = {
+		id = KEV_tungsten_mijnen
+		icon = GFX_focus_generic_tungsten
+		prerequisite = { focus = KEV_onze_staal_industrie }
+		x = 3
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_political_power = 20
+		       	add_resource = {
+				type = tungsten
+				amount = 8
+				state = 289
+			}
+		}
+	}
+	focus = {
+		id = KEV_trein_sporen_naar_de_tungsten_mijnen
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = KEV_tungsten_mijnen }
+		x = 3
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		289 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		724 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+		}
+	  }
+	}
+	focus = {
+		id = KEV_textiel_fabrieken
+		icon = GFX_focus_generic_aluminum
+		prerequisite = { focus = KEV_vietnamese_olie_velden }
+		x = 8
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    add_resource = {
+				type = aluminium
+				amount = 8
+				state = 724
+			}
+		}
+	}
+	focus = {
+		id = KEV_synthetisch_rubber
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = KEV_textiel_fabrieken }
+		x = 7
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KEV_coal_liquidization
+				bonus = 0.5
+				uses = 1
+				category = synth_resources
+			}
+		    add_resource = {
+				type = rubber
+				amount = 8
+				state = 286
+			}
+		}
+	}
+	focus = {
+		id = KEV_verbeter_onze_synthetische_werken
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = KEV_textiel_fabrieken }
+		x = 9
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = KEV_coal_liquidization
+				bonus = 0.5
+				uses = 1
+				category = synth_resources
+			}
+		    add_resource = {
+				type = rubber
+				amount = 10
+				state = 286
+			}
+		}
+	}
+	focus = {
+		id = KEV_engels_koloniaal_rubber
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = KEV_synthetisch_rubber }
+		mutually_exclusive = { focus = KEV_duits_synthetisch_rubber }
+		x = 5
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				ENG = {
+				add_opinion_modifier = { target = KEV modifier = ger_ita_alliance_focus }
+			}
+		add_popularity = { ideology = democratic popularity = 0.03 }
+		    add_resource = {
+				type = rubber
+				amount = 6
+				state = 286
+			}
+		}
+	}
+    focus = {
+		id = KEV_duits_synthetisch_rubber
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = KEV_synthetisch_rubber }
+		mutually_exclusive = { focus = KEV_engels_koloniaal_rubber }
+		x = 7
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = { target = KEV modifier = ger_ita_alliance_focus }
+			}
+		add_popularity = { ideology = fascism popularity = 0.03 }
+		    add_resource = {
+				type = rubber
+				amount = 6
+				state = 286
+			}
+		}
+	}
+	focus = {
+		id = KEV_onze_nieuwe_verbeterde_economie
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = KEV_duits_synthetisch_rubber focus = KEV_engels_koloniaal_rubber }
+		prerequisite = { focus = KEV_kevchimin_universiteit }
+		prerequisite = { focus = KEV_trein_sporen_voor_staal_handel }
+		prerequisite = { focus = KEV_trein_sporen_naar_de_tungsten_mijnen }
+		prerequisite = { focus = KEV_kevchimin_treinwerk }
+		mutually_exclusive = { focus = KEV_engels_koloniaal_rubber }
+		x = 8
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = KEV_onze_nieuwe_economie
+		}
+	}	
+	focus = {
+		id = KEV_ons_leger
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		x = 24
+		y = 0
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_political_power = 120
+	}
+  } 
+	focus = {
+		id = KEV_strengere_conscriptie
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = KEV_ons_leger }
+		x = 23
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				swap_ideas = {
+				remove_idea = incompotentearmy
+				add_idea = KEV_incompotentearmy2
+			}
+		}
+	}	
+	focus = {
+		id = KEV_betere_training
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = KEV_ons_leger }
+		available = {
+		has_completed_focus = KEV_strengere_conscriptie
+		}
+		x = 25
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				swap_ideas = {
+				remove_idea = KEV_incompotentearmy2
+				add_idea = KEV_incompotentearmy3
+			}
+		}
+	}
+	focus = {
+		id = KEV_betere_officieren
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = KEV_strengere_conscriptie }
+		available = {
+		has_completed_focus = KEV_betere_training
+		}
+		x = 23
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				swap_ideas = {
+				remove_idea = KEV_incompotentearmy3
+				add_idea = KEV_incompotentearmy4
+			}
+		}
+	}
+	focus = {
+		id = KEV_betere_generalen
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = KEV_betere_training }
+		available = {
+		has_completed_focus = KEV_betere_officieren
+		}
+		x = 25
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				swap_ideas = {
+				remove_idea = KEV_incompotentearmy4
+				add_idea = KEV_incompotentearmy5
+			}
+		}
+	}
+	focus = {
+		id = KEV_een_nieuw_leger
+		icon = GFX_idea_german_advisors
+		prerequisite = { focus = KEV_betere_officieren focus = KEV_betere_generalen }
+		x = 24
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KEV_incompotentearmy5
+				add_idea = KEV_incompotentearmy6
+			}
+		}
+	}
+	
+	focus = {
+		id = KEV_politiek
+		icon = GFX_goal_generic_demand_territory
+		x = 38
+		y = 0
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+         add_political_power = 120
+		}
+	}
+	
+	focus = {
+		id = KEV_broederschap
+		icon = GFX_focus_ger_reichskommisariats
+		prerequisite = { focus = KEV_politiek }
+		mutually_exclusive = { focus = KEV_gelijkheid focus = KEV_de_monarchie focus = KEV_vrijheid }
+		x = 30
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            add_ideas = nationalism
+		}
+	}
+	
+	focus = {
+		id = KEV_gelijkheid
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = KEV_politiek }
+		mutually_exclusive = { focus = KEV_broederschap focus = KEV_de_monarchie focus = KEV_vrijheid }
+		x = 35
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+           add_ideas = internationalism
+		}
+	}
+	
+	focus = {
+		id = KEV_vrijheid
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = KEV_politiek }
+		mutually_exclusive = { focus = KEV_broederschap focus = KEV_de_monarchie focus = KEV_gelijkheid }
+		x = 47
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            add_ideas = KEV_vrijheid
+		}
+	}
+	
+	focus = {
+		id = KEV_de_monarchie
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = KEV_politiek }
+		mutually_exclusive = { focus = KEV_broederschap focus = KEV_vrijheid focus = KEV_gelijkheid }
+		x = 42
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_monarchie
+			
+		}
+	}
+	
+    focus = {
+		id = KEV_hitlers_fascisme
+		icon = GFX_focus_rom_abdicate
+		prerequisite = { focus = KEV_broederschap }
+		mutually_exclusive = { focus = KEV_kevins_fascisme }
+		x = 31
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_hitler_fascism
+		}
+	}
+
+	focus = {
+		id = KEV_kevins_fascisme
+		icon = GFX_focus_rom_handle_king
+		prerequisite = { focus = KEV_broederschap }
+		mutually_exclusive = { focus = KEV_hitlers_fascisme }
+		x = 29
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_kevins_fascism
+		}
+	}
+	focus = {
+		id = KEV_een_partij_staat
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = KEV_kevins_fascisme focus = KEV_hitlers_fascisme }
+		x = 30
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_opposition_supressed
+		}
+	}
+	focus = {
+		id = KEV_nationalistische_educatie
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = KEV_een_partij_staat }
+		x = 30
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+          add_ideas = KEV_nationalistische_educatie
+		}
+	}
+	focus = {
+		id = KEV_meer_industrialisatie
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = KEV_een_partij_staat }
+		x = 32
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		289 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		741 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+		}
+	}
+}
+	focus = {
+		id = KEV_geef_werk_aan_de_mensen
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = KEV_meer_industrialisatie }
+		x = 32
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		286 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		671 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+		
+		}
+	}
+}
+	focus = {
+		id = KEV_proffesionele_wetenschappers
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { focus = KEV_nationalistische_educatie }
+		x = 30
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = KEV_sluit_aan_bij_de_axis
+		icon = GFX_focus_chi_mission_to_germany
+		mutually_exclusive = { focus = KEV_axis_van_azie }
+		prerequisite = { focus = KEV_een_partij_staat }
+		available = {
+		has_government = fascism
+		}
+		x = 28
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			GER = { country_event = { id = germany.131 } }
+		}
+	}
+	focus = {
+		id = KEV_duitse_technologie
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = KEV_sluit_aan_bij_de_axis }
+		x = 28
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				name = mech_army_bonus
+				technology = basic_medium_tank
+				technology = improved_medium_tank
+				technology = advanced_medium_tank
+				technology = mechanised_infantry
+			}
+		}
+	}
+	focus = {
+		id = KEV_verwijder_de_oppositsie
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = KEV_proffesionele_wetenschappers }
+		x = 30
+		y = 6
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_oppositie_verwijderd
+		}
+	}
+	focus = {
+		id = KEV_axis_van_azie
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		prerequisite = { focus = KEV_een_partij_staat }
+		mutually_exclusive = { focus = KEV_sluit_aan_bij_de_axis }
+		available = {
+		has_government = fascism
+		}
+		x = 26
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_faction = broederschap_van_azie
+		}
+	}
+	focus = {
+		id = KEV_deel_technologie
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = KEV_axis_van_azie }
+		available = {
+			is_in_faction = yes
+			OR = {
+				num_of_factories > 50
+				any_other_country = {
+					is_in_faction_with = ROOT
+					num_of_factories > 25
+				}
+			}
+		}
+		x = 26
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_research_slots > 2
+				}
+				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 0.5
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}	
+				add_tech_bonus = {
+					name = infantry_artillery_bonus #@#
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+					category = artillery
+				}				
+			}			
+		}
+	}	
+	focus = {
+		id = KEV_stalins_manier
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = KEV_gelijkheid }
+		mutually_exclusive = { focus = KEV_socialisme }
+		x = 34
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_stalin_manier
+		}
+	}
+	focus = {
+		id = KEV_socialisme
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = KEV_gelijkheid }
+		mutually_exclusive = { focus = KEV_stalins_manier }
+		x = 36
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_socialisme
+		}
+	}
+	focus = {
+		id = KEV_verbeter_relaties_met_de_russen
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = KEV_stalins_manier }
+		x = 32
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				SOV = {
+				add_opinion_modifier = { target = KEV modifier = ger_ita_alliance_focus }
+				add_ideas = communist_influence
+		}
+    }  }	
+	focus = {
+		id = KEV_een_wapen_in_elke_hand
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = KEV_stalins_manier }
+		x = 34
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_wapen_elke_hand
+		}
+	}
+	focus = {
+		id = KEV_sluit_aan_bij_de_comintern
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = KEV_een_wapen_in_elke_hand focus = KEV_verbeter_relaties_met_de_russen }
+		available = {
+		has_government = communism
+		}
+		x = 34
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			SOV = { country_event = { id = soviet.67 }}
+		}
+	}
+	focus = {
+		id = KEV_kwaliteit_boven_alles
+		icon = GFX_goal_continuous_reduce_training_time
+		prerequisite = { focus = KEV_socialisme }
+		x = 36
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 0.5
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}	
+				add_tech_bonus = {
+					name = infantry_bonus
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+				}
+				add_tech_bonus = {
+					name = infantry_artillery_bonus
+					bonus = 0.5
+					uses = 1
+					category = artillery
+					category = infatry_weapons
+				}
+		}
+	}
+	focus = {
+		id = KEV_communisme_in_azie
+		icon = GFX_goal_support_fourth_int
+		prerequisite = { focus = KEV_socialisme }
+		available = {
+		has_government = communism
+		}
+		x = 38
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		RAJ = {
+				add_ideas = communist_influence
+		  }
+		INS = {
+				add_ideas = communist_influence
+		  }
+		PHI = {
+				add_ideas = communist_influence
+		  }
+		MAL = {
+				add_ideas = communist_influence
+		  }
+		}
+	}
+	focus = {
+		id = KEV_communistische_broederschap
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = KEV_kwaliteit_boven_alles focus = KEV_communisme_in_het_midden_oosten }
+		available = {
+		has_government = communism
+		}
+		x = 36
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_faction = arbeiders_congress
+		}
+	}
+	focus = {
+		id = KEV_communistische_jeugd
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = KEV_sluit_aan_bij_de_comintern focus = KEV_communistische_broederschap }
+		x = 35
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_commie_jeugd
+		}
+	}
+	focus = {
+		id = KEV_communistische_wetenschap
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = KEV_sluit_aan_bij_de_comintern focus = KEV_communistische_broederschap }
+		x = 37
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = KEV_de_zuivering
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = KEV_sluit_aan_bij_de_comintern focus = KEV_communistische_broederschap }
+		x = 39
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_de_zuivering
+		}
+	}
+	focus = {
+		id = KEV_blijf_neutraal
+		icon = GFX_goal_generic_defence
+		mutually_exclusive = { focus = KEV_een_nieuw_rijk }
+		prerequisite = { focus = KEV_de_monarchie }
+		x = 43
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_neutraalheid
+		}
+	}
+	focus = {
+		id = KEV_een_nieuw_rijk
+		icon = GFX_focus_ger_return_of_the_kaiser
+		prerequisite = { focus = KEV_de_monarchie }
+		mutually_exclusive = { focus = KEV_blijf_neutraal }
+		x = 41
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_nieuw_rijk
+		}
+	}
+	focus = {
+		id = KEV_monarchie_propaganda
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = KEV_een_nieuw_rijk }
+		x = 40
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_monarchie_propaganda
+		}
+	}
+	focus = {
+		id = KEV_koning_kevin
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = KEV_monarchie_propaganda }
+		x = 39
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_koning_kevin
+		}
+	}
+	focus = {
+		id = KEV_nieuwe_manieren_van_wetenschap
+		icon = GFX_focus_research
+		prerequisite = { focus = KEV_monarchie_propaganda }
+		x = 41
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = KEV_verdedig_het_moederland
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = KEV_blijf_neutraal }
+		x = 42
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_fortificatie_focus
+		}
+	}
+	focus = {
+		id = KEV_mobilizeer_voor_het_moederland
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = KEV_blijf_neutraal }
+		x = 44
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+			add_ideas = KEV_mobilizeer_moederland
+		}
+	}
+	focus = {
+		id = KEV_vrede_industrie
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = KEV_verdedig_het_moederland focus = KEV_mobilizeer_voor_het_moederland }
+		x = 43
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		741 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		670 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+		
+		}
+}	}
+	focus = {
+		id = KEV_vooruitgang_in_de_wetenschap
+		icon = GFX_focus_research2
+		prerequisite = { focus = KEV_vrede_industrie }
+		x = 43
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+			}
+		}
+	focus = {
+		id = KEV_beperkte_interventie
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = KEV_vrijheid }
+		mutually_exclusive = { focus = KEV_interventie }
+		x = 48
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = KEV_interventie
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = KEV_vrijheid }
+		mutually_exclusive = { focus = KEV_beperkte_interventie }
+		x = 46
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+         add_ideas = KEV_interventie1
+		} 
+	}
+	focus = {
+		id = KEV_focus_op_de_handel
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = KEV_beperkte_interventie }
+		x = 50
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = KEV_bouw_forten
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		prerequisite = { focus = KEV_beperkte_interventie }
+		x = 48
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_fortificatie_focus
+		}
+	}
+	focus = {
+		id = KEV_verklaar_neutraliteit
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = KEV_focus_op_de_handel focus = KEV_bouw_forten }
+		x = 51
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = KEV_verbeter_relaties_met_de_britten
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = KEV_interventie }
+		x = 46
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				ENG = {
+				add_opinion_modifier = { target = KEV modifier = ger_ita_alliance_focus }
+				add_ideas = democratic_influence
+			}
+		}
+	}
+	focus = {
+		id = KEV_sluit_aan_bij_de_geallieerden
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = KEV_verbeter_relaties_met_de_britten }
+		mutually_exclusive = { focus = KEV_anti_revolutionairen }
+		available = {
+		has_government = democratic
+		}
+		x = 45
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ENG = { country_event = { id = britain.31 } }
+			}
+		}
+	focus = {
+		id = KEV_anti_revolutionairen
+		icon = GFX_focus_AST_never_gallipoli
+		prerequisite = { focus = KEV_verbeter_relaties_met_de_britten }
+		mutually_exclusive = { focus = KEV_sluit_aan_bij_de_geallieerden }
+		available = {
+		has_government = democratic
+		}
+		x = 47
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_faction = anti_revolutionairen
+		}
+	}
+	focus = {
+		id = KEV_britse_wetenschap
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { focus = KEV_sluit_aan_bij_de_geallieerden }
+		x = 45
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = KEV_embargo_duitsland
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = KEV_anti_revolutionairen }
+		x = 47
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = { target = KEV modifier = embargo }
+			}
+		}
+	}
+	focus = {
+		id = KEV_embargo_de_russen
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = KEV_anti_revolutionairen }
+		x = 48
+		y = 6
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			SOV = {
+				add_opinion_modifier = { target = KEV modifier = embargo }
+			}
+		}
+	}
+	focus = {
+		id = KEV_neutrale_wetenschap
+		icon = GFX_focus_research
+		prerequisite = { focus = KEV_anti_revolutionairen }
+		x = 48
+		y = 7
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = KEV_mobilizeer_de_reserven
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = KEV_embargo_duitsland focus = KEV_britse_wetenschap }
+		x = 46
+		y = 7
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = KEV_mobilizeer_de_reserven1
+		}
+	}
+	focus = {
+		id = KEV_verspreid_democratie_met_het_leger
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = KEV_verbeter_relaties_met_de_britten }
+		mutually_exclusive = { focus = KEV_sluit_aan_bij_de_geallieerden focus = KEV_anti_revolutionairen }
+		available = {
+		has_government = democratic
+		}
+		x = 49
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = KEV_val_iran_aan
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = KEV_verspreid_democratie_met_het_leger }
+		x = 49
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = PER
+			}
+		}
+	}
+	focus = {
+		id = KEV_val_KEVndia_aan
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = KEV_verspreid_democratie_met_het_leger }
+		x = 51
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ELL
+			}
+		}
+	}
+	focus = {
+		id = KEV_val_turkije_aan
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = KEV_verspreid_democratie_met_het_leger }
+		x = 53
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = AFG
+			}
+		}
+	}
+	focus = {
+		id = KEV_de_nieuwe_wetenschappers
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = KEV_val_iran_aan focus = KEV_val_KEVndia_aan focus = KEV_val_turkije_aan }
+		x = 51
+		y = 6
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = KEV_uitbreiding
+		icon = GFX_focus_generic_strike_at_democracy2
+		available = {
+		OR = {
+		has_completed_focus = KEV_een_nieuw_rijk
+		has_government = fascism 
+		has_government = communism}
+
+		}
+		x = 22
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = KEV_eis_andaman
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = KEV_uitbreiding }
+		available = {
+		has_army_manpower = { size > 250000 }
+		}
+		x = 21
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			KEV = { country_event = { id = kev.9 } }
+		}
+	}
+	focus = {
+		id = KEV_eis_noord_borneo
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = KEV_eis_andaman }
+		available = {
+		has_army_manpower = { size > 250000 }
+		}
+		x = 21
+		y = 6
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		KEV = { country_event = { id = kev.3 } }
+		}
+	}
+	focus = {
+		id = KEV_eis_ceylon
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = KEV_uitbreiding }
+		available = {
+		has_army_manpower = { size > 400000 }
+		}
+		x = 23
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		KEV = { country_event = { id = kev.7 } }
+		}
+	}
+	focus = {
+		id = KEV_eis_sumatra
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = KEV_eis_ceylon }
+		available = {
+		has_army_manpower = { size > 400000 }
+		}
+		x = 23
+		y = 6
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		KEV = { country_event = { id = kev.5 } }
+		}
+	}
+	focus = {
+		id = KEV_eis_singapoer
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = KEV_eis_sumatra focus = KEV_eis_noord_borneo }
+		available = {
+		has_army_manpower = { size > 500000 }
+		}
+		x = 22
+		y = 7
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			KEV = { country_event = { id = kev.0 } }
+		}
+	}
+	focus = {
+		id = KEV_intergreer_singapoer
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = KEV_eis_singapoer }
+		available = {
+		controls_state = 336
+		}
+		x = 21
+		y = 8
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_state_core = 336
+		}
+	}
+	focus = {
+		id = KEV_intergreer_noord_borneo
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = KEV_eis_singapoer }
+		available = {
+		controls_state = 333
+		}
+		x = 19
+		y = 8
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_state_core = 333
+		}
+	}
+	focus = {
+		id = KEV_intergreer_ceylon
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = KEV_eis_singapoer }
+		available = {
+		controls_state = 422
+		}
+		x = 23
+		y = 8
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_state_core = 422
+		}
+	}
+	focus = {
+		id = KEV_intergreer_sumatra
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = KEV_eis_singapoer }
+		available = {
+		controls_state = 672
+		}
+		x = 25
+		y = 8
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_state_core = 672
+		}
+	}
+	focus = {
+		id = KEV_oorlog_met_rusland
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = KEV_intergreer_noord_borneo focus = KEV_intergreer_ceylon focus = KEV_intergreer_singapoer focus = KEV_intergreer_sumatra }
+		x = 24
+		y = 9
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+			type = annex_everything
+			target = SOV
+			}
+		}
+	}
+	focus = {
+		id = KEV_oorlog_met_engeland
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = KEV_intergreer_noord_borneo focus = KEV_intergreer_ceylon focus = KEV_intergreer_singapoer focus = KEV_intergreer_sumatra }
+		x = 22
+		y = 9
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+			type = annex_everything
+			target = ENG
+			}
+		}
+	}
+	focus = {
+		id = KEV_oorlog_met_duitsland
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = KEV_intergreer_noord_borneo focus = KEV_intergreer_ceylon focus = KEV_intergreer_singapoer focus = KEV_intergreer_sumatra }
+		x = 20
+		y = 9
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+			type = annex_everything
+			target = GER
+			}
+		}
+	}
+	
+	focus = {
+		id = KEV_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 57
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = KEV_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = KEV_army_effort }
+		x = 55
+		y = 1
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = KEV_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = KEV_army_effort }
+		bypass = { has_tech = motorised_infantry }
+		x = 57
+		y = 1
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.75
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = KEV_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = KEV_army_effort }
+		x = 56
+		y = 2
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = KEV_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = KEV_equipment_effort }
+		x = 56
+		y = 2
+		relative_position_id = equipment_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = KEV_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = KEV_motorization_effort }
+		x = 56
+		y = 2
+		relative_position_id = motorization_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 0.5
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = KEV_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = KEV_doctrine_effort }
+		x = 56
+		y = 2
+		relative_position_id = doctrine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = KEV_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = KEV_equipment_effort_2 }
+		x = 56
+		y = 2
+		relative_position_id = equipment_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 1
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = KEV_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = KEV_mechanization_effort }
+		x = 56
+		y = 2
+		relative_position_id = mechanization_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = KEV_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = KEV_equipment_effort_3 }
+		prerequisite = { focus = KEV_doctrine_effort_2 }
+		prerequisite = { focus = KEV_armor_effort }
+		x = 57
+		y = 1
+		relative_position_id = equipment_effort_3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+}

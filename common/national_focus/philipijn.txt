@@ -1,0 +1,24 @@
+add_name_space = phi
+
+country_event = {
+     id = phi.0
+	 title = phi.0.t
+	 desc = phi.0.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = phi.0
+	 }
+	  
+	 option = {
+	     name = phi.0.a
+		 trigger = {
+		 tag = PHI
+		 }
+		KEV = { country_event = { id = kev.1 days = 1} }
+	 }
+}

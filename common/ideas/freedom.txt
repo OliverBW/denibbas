@@ -1,0 +1,1511 @@
+ideas = {
+
+  	country = {
+		immigratie = {
+		
+		picture = GFX_idea_immigratie
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				MONTHLY_POPULATION = 0.15
+				conscription_factor = 0.1
+				political_power_gain = -0.2
+			}
+		}
+		ELL_immigratie1 = {
+		
+		picture = GFX_idea_immigratie
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				MONTHLY_POPULATION = 0.10
+				conscription_factor = 0.05
+			}
+		}
+		ELL_immigratie2 = {
+		
+		picture = GFX_idea_immigratie
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+			}
+		}
+		ELL_immigratie3 = {
+		
+		picture = GFX_idea_immigratie
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			 stability_factor = 0.025
+			}
+		}
+		
+		ELL_immigratie4 = {
+		
+		picture = GFX_idea_immigratie
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			 stability_factor = 0.05
+			 consumer_goods_factor = -0.02
+			}
+		}
+		
+		ELL_immigratie5 = {
+		
+		picture = GFX_idea_immigratie
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			 stability_factor = 0.05
+			 consumer_goods_factor = -0.05
+			 political_power_gain = 0.3
+			}
+		}
+	ELL_opposition_supressed ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+	
+			modifier = {
+			political_power_gain = 0.10
+			stability_factor = 0.05
+			drift_defence_factor = 0.2
+			}
+	}
+	ELL_nationalistische_educatie ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = SOV_scientist_defect
+	
+			modifier = {
+				research_time_factor = -0.05
+				conscription = 0.03
+				training_time_factor = -0.1
+			}
+	}
+	ELL_oppositie_verwijderd ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = idea_generic_purge
+	
+			modifier = {
+					political_power_gain = 0.05
+					enemy_partisan_effect = -0.2
+			}
+	}
+	ELL_elliot_fascism ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+	
+			modifier = {
+					justify_war_goal_time = -0.1
+					fascism_drift = 0.05
+					stability_factor = 0.1
+					war_support_factor = 0.1
+					conscription = 0.01
+					
+			}
+	}
+	ELL_hitler_fascism ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+	
+			modifier = {
+				political_power_gain = 1
+				conscription = 0.03
+				army_org_Factor = 0.1
+				army_morale_factor = 0.1
+					
+			}
+	}
+	ELL_stalin_manier ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+	
+			modifier = {
+				communism_drift = 0.1
+				stability_factor = -0.1
+				political_power_gain = 0.5
+				conscription = 0.01
+				war_support_factor = 0.05
+					
+			}
+	}
+	ELL_wapen_elke_hand ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+	
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}	
+			}
+	   }
+	  ELL_commie_jeugd ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_national_mobilization_focus
+			
+			modifier = {
+				conscription = 0.05
+				training_time_factor = -0.1
+			}
+			
+	   }
+	   ELL_socialisme ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				communism_drift = 0.1
+				stability_factor = 0.1
+				war_support_factor = -0.05
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.1
+			}
+			
+	   }
+	   	ELL_de_zuivering ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = fourth_international
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				army_org_Factor = 0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+			
+	   }
+	   	ELL_neutraalheid ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_wall_line
+			
+			modifier = {
+				#generate_wargoal_tension = 1.00
+				join_faction_tension = 1.00
+				#lend_lease_tension = 0.50
+				send_volunteers_tension = 0.20
+				guarantee_tension = 1.0
+				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
+				ai_get_ally_desire_factor = -100
+			}
+			
+	   }
+	   	ELL_monarchie ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_national_mobilization_focus
+			
+			modifier = {
+				neutrality_drift = 0.1
+			}
+			
+	   }
+	   	ELL_fortificatie_focus ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_wall_line
+			
+			modifier = {
+				production_speed_bunker_factor = 0.1
+				production_speed_coastal_bunker_factor = 0.1
+			}
+			
+	   }
+	   	ELL_mobilizeer_moederland ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = idea_ast_volunteer_defence_corps
+			
+			modifier = {
+				war_support_factor = 0.15
+				conscription = 0.03
+			}
+			
+	   }
+	   ELL_nieuw_rijk ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				neutrality_drift = 0.1
+				conscription = 0.03
+				justify_war_goal_time = -0.1
+			}
+			
+	   }
+	   	ELL_monarchie_propaganda ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				drift_defence_factor = 0.2
+				stability_factor = 0.05
+			}
+			
+	   }
+	   	ELL_koning_elliot ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				drift_defence_factor = 0.2
+				stability_factor = 0.1
+				mobilization_speed = 0.1
+				high_command_cost_factor = -0.25
+			}
+			
+	   }
+	   	ELL_vrijheid ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				democratic_drift = 0.1
+			}
+			
+	   }
+	   	ELL_interventie1 ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				war_support_factor = 0.1
+			}
+			
+	   }
+	   	ELL_mobilizeer_de_reserven1 ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				conscription = 0.04
+			}
+			
+	   }
+	   	ELL_onze_nieuwe_economie ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_factory_strikes
+			
+			modifier = {
+				political_power_gain = 0.1
+				consumer_goods_factor = -0.1
+				production_factory_start_efficiency_factor = 0.1
+			}
+			
+	   }
+
+	   	   	ELL_huisvesting_act ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_goods_red_bonus
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_industrial_complex_factor = 0.1
+			}
+			
+	   }
+
+	   	ELL_economische_crisis ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = great_depression
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1 
+			}
+			
+	   }
+	   	ELL_economische_crisis1 ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = great_depression
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_industrial_complex_factor = -0.05
+				production_speed_arms_factory_factor = -0.05
+			}
+			
+	   }
+	   	ELL_economische_crisis2 ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = great_depression
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+			
+	   }
+	   	ELL_radio_ENO ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+
+			
+			modifier = {
+			political_power_gain = 0.1
+			drift_defence_factor = 0.15
+			land_reinforce_rate = 0.05
+			}
+			
+	   }
+	   	ELL_de_ENG ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+
+			
+			modifier = {
+			political_power_gain = 0.05
+			local_resources_factor = 0.10
+			}
+			
+	   }
+	   	ELL_militaire_bouw_wet ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = idea_ast_naval_auxiliary_patrol
+
+			
+			modifier = {
+			production_speed_arms_factory_factor = 0.1
+			production_speed_bunker_factor = 0.1
+			}
+			
+	   }
+	   	ELL_de_NWBE ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = idea_ast_volunteer_defence_corps
+
+			
+			modifier = {
+			production_speed_arms_factory_factor = 0.1
+			conscription = 0.005
+			}
+			
+	   }
+
+	   	ELL_de_nieuwe_ENIGMA_machine ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+
+			
+			modifier = {
+			encryption_factor = 0.05
+			decryption_factor = 0.05
+			land_reinforce_rate = 0.05
+			}
+			
+	   }
+	   ELL_nationale_wapen_wet ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_national_mobilization_focus
+
+			
+			modifier = {
+			training_time_army_factor = -0.05
+			army_attack_factor = 0.1
+			}
+			
+	   }
+
+	   	ELL_veiligheid_van_onze_mensen ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = idea_ast_all_in
+
+			
+			modifier = {
+			army_defence_factor = 0.1
+			max_dig_in = 0.1
+			}
+			
+	   }
+	   	ELL_superieure_vuurkracht ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_army_of_aggression_focus
+
+			
+			modifier = {
+			army_artillery_attack_factor = 0.15
+			army_artillery_defence_factor = 0.05
+			}
+			
+	   }
+
+	   	 ELL_een_mobiel_leger ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_army_of_aggression_focus
+
+			
+			modifier = {
+			planning_speed = 0.10
+			motorized_attack_factor = 0.05
+			army_armor_speed_factor = 0.05
+			army_speed_factor = 0.05
+			}
+			
+	   }
+	   	ELL_vernieuwde_trainingen ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_army_of_aggression_focus
+
+			
+			modifier = {
+			army_leader_start_level = 2
+			training_time_army_factor = -0.10
+			}
+			
+	   }
+
+	   	ELL_fascistische_propaganda ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_army_of_aggression_focus
+
+			
+			modifier = {
+			fascism_drift = 0.10
+			}
+			
+	   }
+
+	   ELL_zwart_shirts ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_army_of_aggression_focus
+
+			
+			modifier = {
+			fascism_drift = 0.05
+			political_power_gain = 0.1
+			conscription = 0.02
+			}
+			
+	   }
+
+	   	ELL_duits_getraind_leger ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			
+			modifier = {
+				army_morale_factor = 0.1
+				army_org_Factor = 0.1
+				research_time_factor = -0.03
+			}
+			
+	   }
+
+	   	ELL_joden_probleem ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			
+			modifier = {
+				conscription = -0.005
+				army_org_Factor = -0.05
+				research_time_factor = 0.03
+			}
+			
+	   }
+
+	   	ELL_het_vernieuwde_leger ={
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+
+			
+			modifier = {
+				training_time_army_factor = -0.10
+				planning_speed = 0.10
+				max_planning = 0.1
+				army_morale_factor = 0.1
+			}
+			
+	   }
+  }
+
+
+
+
+###########################################################################################################
+
+
+
+
+	political_advisor = {
+
+		ELL_paul_van_zeeland = {
+
+			picture = generic_political_advisor_europe_2
+
+			allowed = {
+				original_tag = ELL
+			}
+			
+			traits = { silent_workhorse }
+		}
+
+		ELL_paul-henri_spaak = {
+
+			picture = generic_political_advisor_europe_1
+				
+			allowed = {
+				original_tag = ELL
+			}
+			
+			traits = { captain_of_industry }
+		}
+
+		ELL_gaston_eyskens = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			traits = { armaments_organizer }
+		}
+		
+		ELL_walther_funk = {
+		
+            picture = generic_political_advisor_europe_4
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			traits = { war_industrialist }
+
+			ai_will_do = {
+				factor = 3
+			}
+		}
+		
+		ELL_konstantin_von_neurath = {
+		
+            picture = generic_political_advisor_europe_5
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			traits = { smooth_talking_charmer }
+		}
+		
+		ELL_ernst_thalmann = {
+		
+		    picture = generic_political_advisor_europe_2
+
+			allowed = {
+				original_tag = ELL
+			}
+			
+			traits = { communist_revolutionary }
+
+			do_effect = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		ELL_kurt_schumacher = {
+		
+		    picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			traits = { democratic_reformer }
+
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		ELL_joseph_goebbels = {
+		
+        picture = generic_political_advisor_europe_4
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			traits = { fascist_demagogue }
+
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		
+		ELL_joseph_ok = {
+
+		picture = generic_political_advisor_europe_5	
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			traits = { propaganda_expert }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	industrial_concern = {
+	
+			ig_faben = {
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			research_bonus = {
+				industry = 0.05
+				synth_resources = 0.1
+			}
+			
+			traits = { refinery_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+	
+	army_chief = {
+
+		ELL_victor_strydonck_burkel = {
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ELL_mister_banaan = {
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ELL_charles_bastin = {
+			picture = generic_army_europe_4
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+		ELL_jules_iserentant = {
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ELL_raoul_overstraeten = {
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+
+			
+			traits = { air_chief_old_guard }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		ELL_fritz_conrad = {
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+
+			
+			traits = { navy_chief_naval_aviation_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ELL_georges_vereecken = {
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+
+			
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+
+		ELL_victor_van_strydonck_de_burkel = {
+			
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		ELL_oscar_michiels = {
+
+			picture = generic_army_europe_5
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ELL_rene_lagrou = {
+
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ELL_yvan_gerard = {
+
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			traits = { navy_naval_air_defense_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	
+		ELL_nico_van_straaten = {
+
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}		
+	}
+
+	theorist = {
+		ELL_jules_pire = {
+			
+			picture = generic_army_europe_6
+
+			allowed = {
+				original_tag = ELL
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.07
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		ELL_fritz_lob = {
+			
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.07
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+		ELL_georges_deffontaine = {
+
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.07
+			}
+			
+			traits = { naval_theorist }
+		}
+
+	}
+
+
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		renault_ELL = {
+			picture = renault
+
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { fast_tank_manufacturer }
+			
+			modifier = {
+				# Renault FT
+			}
+		}
+
+		vickers_armstrong_ELL = {
+			picture = generic_tank_manufacturer_2
+		
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { medium_tank_manufacturer }
+			
+			modifier = {
+				
+			}
+		}
+		
+		ELL_MAN = {
+
+			picture = GER_MAN
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			research_bonus = {
+				armor = 0.10
+			}
+			
+			traits = { medium_tank_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	aircraft_manufacturer = {
+	
+		designer = yes
+		
+		avions_fairey = {
+			picture = generic_air_manufacturer_2
+
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# Tipsy B, firefly, fairey fox
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		renard = {
+			picture = generic_air_manufacturer_2
+
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# Tipsy B, firefly, fairey fox
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		cockerill = { 
+			picture = generic_naval_manufacturer_1
+
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+						
+			traits = { naval_manufacturer }
+		}
+	}
+
+	materiel_manufacturer = {
+		
+		designer = yes
+		
+		fn_herstol = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			
+			allowed = {
+				original_tag = ELL
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+	}
+
+
+}
