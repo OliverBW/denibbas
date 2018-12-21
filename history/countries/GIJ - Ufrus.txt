@@ -1,0 +1,120 @@
+capital = 278
+
+oob = "GIJ_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+	basic_light_tank = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	tactical_bomber1 = 1
+	strategic_bomber1 = 1
+	transport = 1
+	formation_flying = 1
+	early_submarine = 1
+	early_destroyer = 1
+	basic_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+}
+
+add_ideas = {
+   
+}
+
+set_research_slots = 3
+set_convoys = 200
+set_stability = 0.6
+set_war_support = 0.3
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 8
+		}
+
+		fascism = {
+			popularity = 6
+		}
+		
+		communism = {
+			popularity = 78
+		}
+		
+		neutrality = { 
+			popularity = 8
+		}
+	}
+	
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Gijs"
+	desc = ""
+	picture = "GIJ_gijs.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Gijs"
+	desc = ""
+	picture = "GIJ_gijs.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Gijs"
+	desc = ""
+	picture = "GIJ_gijs.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Gijs"
+	desc = ""
+	picture = "GIJ_gijs.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		#
+	}
+}
+
+
+create_corps_commander = {
+	name = "WIP"
+	portrait_path = "gfx/leaders/GIJ/WIP.dds"
+	traits = { trait_mountaineer }
+	skill = 6
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
