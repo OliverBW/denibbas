@@ -1,0 +1,10 @@
+on_actions = {
+    on_startup = {	
+        effect = {
+             ELL = { country_event = { id = welkom.0 } }
+             OLA = { country_event = { id = welkom.1 } }
+             BIM = { country_event = { id = welkom.2 } }
+             KEV = { country_event = { id = welkom.3 } }
+        }
+    }
+}

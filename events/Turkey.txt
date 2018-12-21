@@ -1,0 +1,112 @@
+﻿###########################
+# turkey Events
+###########################
+
+add_namespace = turkey
+
+# President dies
+country_event = {
+	id = turkey.1
+	title = turkey.1.t
+	desc = turkey.1.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		has_government = neutrality
+		date > 1938.11.1
+		has_start_date < 1936.01.02
+	}	
+
+	mean_time_to_happen = {
+		days = 30
+		modifier = {
+			factor = 0.5
+			date > 1938.12.1
+		}
+		modifier = {
+			factor = 0.2
+			date > 1939.1.1
+		}
+	}
+
+	option = {
+		name = turkey.1.a
+		kill_country_leader = yes
+	}
+}
+
+#####################################################################
+
+
+
+country_event = {
+     id = turkey.2
+	 title = turkey.2.t
+	 desc = turkey.2.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = TUR
+	 }
+	  
+	 option = {
+	     name = turkey.2.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 ELL = { country_event = { id = ell.11 days = 1 } }
+		 BIM = { country_event = { id = bim.2 days = 1 } }
+	 }
+}
+
+
+country_event = {
+     id = turkey.3
+	 title = turkey.3.t
+	 desc = turkey.3.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = no
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = TUR
+	 }
+	  
+	 option = {
+	     name = turkey.3.a
+		 trigger = {
+		 tag = BIM
+		 }
+		 ELL = { country_event = { id = ell.13 days = 1 } }
+		 BIM = { country_event = { id = bim.14 days = 1 } }
+	 }
+}
+
+country_event = {
+     id = turkey.4
+	 title = turkey.4.t
+	 desc = turkey.4.d
+	 picture = GFX_report_event_poland_rejects
+	 is_triggered_only = no
+	 
+
+	 fire_only_once = yes
+	
+	  
+	 option = {
+	     name = turkey.4.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 ELL = { country_event = { id = ell.16 days = 1 } }
+	 }
+}

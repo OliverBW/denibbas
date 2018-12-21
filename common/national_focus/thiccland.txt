@@ -1,0 +1,2230 @@
+focus_tree = {
+	id = BIM_focus
+	
+	country = {
+		factor = 0
+	
+	
+	    modifier = {
+		    add = 10
+			tag = BIM
+	    }
+		
+		modifier = {
+		    add = 10
+			original_tag = BIM
+	    }
+	}
+	
+	
+	default = no
+	reset_on_civilwar = no
+
+	focus = {
+		id = BIM_onze_industrie
+		icon = GFX_goal_generic_production
+		x = 15
+		y = 0.1
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	
+	focus = {
+		id = BIM_nieuwe_fabrieken
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = BIM_onze_industrie }
+		x = 12
+		y = 1
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		185 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+		}
+	 }
+	}
+	
+	focus = {
+		id = BIM_nieuwe_wapen_fabrieken
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BIM_onze_industrie }
+		x = 18
+		y = 1
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		341 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+		}
+	 }
+   }	
+	focus = {
+		id = BIM_enigma_machines
+		icon = GFX_goal_continuous_non_factory_construct
+		prerequisite = { focus = BIM_nieuwe_fabrieken }
+		x = 13
+		y = 2.5
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+	
+	focus = {
+		id = BIM_meer_wapen_fabrieken
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BIM_nieuwe_wapen_fabrieken }
+		x = 19
+		y = 2.5
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		340 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+		}
+	 }
+	}
+		focus = {
+		id = BIM_strategische_uitbreiding
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = BIM_nieuwe_fabrieken }
+		x = 11
+		y = 2.5
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		186 = {
+                add_extra_state_shared_building_slots = 2
+          }
+        47 = {
+                add_extra_state_shared_building_slots = 2	
+            }
+        185 = {
+                add_extra_state_shared_building_slots = 2
+            }				
+		}
+	 }
+	focus = {
+		id = BIM_vind_nieuwe_designs_uit
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = BIM_nieuwe_wapen_fabrieken }
+		x = 17
+		y = 2.5
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 1
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	
+	focus = {
+		id = BIM_focus_op_de_lichte_industrie
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = BIM_strategische_uitbreiding focus = BIM_enigma_machines }
+		mutually_exclusive = { focus = BIM_focus_op_de_zware_industrie }
+		x = 12
+		y = 3
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		339 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+		}
+	 }
+	}
+	focus = {
+		id = BIM_focus_op_de_zware_industrie
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = BIM_vind_nieuwe_designs_uit focus = BIM_meer_wapen_fabrieken }
+		mutually_exclusive = { focus = BIM_focus_op_de_lichte_industrie }
+		x = 18
+		y = 3
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		342 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = arms_factory
+                    level = 3
+                    instant_build = yes
+                }
+		}
+	 }
+	}
+	focus = {
+		id = BIM_thicc_treinwerk
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = BIM_focus_op_de_lichte_industrie focus = BIM_focus_op_de_zware_industrie }
+		x = 16
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		47 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = infrastructure
+                    level = 3
+                    instant_build = yes
+                }
+		}
+	 }
+	}
+	focus = {
+		id = BIM_thicc_universiteit
+		icon = GFX_focus_research
+		prerequisite = { focus = BIM_strategische_uitbreiding  focus = BIM_verbeter_onze_synthetische_werken }
+		x = 10
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = BIM_kaukasus_olie_velden
+		icon = GFX_goal_generic_oil_refinery
+		x = 5
+		y = 0
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    add_political_power = 120
+			add_resource = {
+				type = oil
+				amount = 12
+				state = 47
+			}
+		}
+	}
+	
+	focus = {
+		id = BIM_onze_staal_industrie
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = BIM_kaukasus_olie_velden }
+		x = 2
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		       	add_resource = {
+				type = steel
+				amount = 8
+				state = 186
+			}
+		47 = {
+                add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+		}
+	 }
+	}
+	focus = {
+		id = BIM_bouw_meer_staal_fabrieken
+		icon = GFX_focus_NZL_bob_semple_tank
+		prerequisite = { focus = BIM_onze_staal_industrie }
+		x = 1
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		       	add_resource = {
+				type = steel
+				amount = 12
+				state = 340
+			}
+		}
+	}
+	focus = {
+		id = BIM_trein_sporen_voor_staal_handel
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = BIM_bouw_meer_staal_fabrieken }
+		x = 1
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		186 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		185 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+		}
+	  }
+	}
+	focus = {
+		id = BIM_tungsten_mijnen
+		icon = GFX_focus_generic_tungsten
+		prerequisite = { focus = BIM_onze_staal_industrie }
+		x = 3
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_political_power = 20
+		       	add_resource = {
+				type = tungsten
+				amount = 8
+				state = 731
+			}
+		}
+	}
+	focus = {
+		id = BIM_trein_sporen_naar_de_tungsten_mijnen
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = BIM_tungsten_mijnen }
+		x = 3
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		731 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		47 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+		}
+	  }
+	}
+	focus = {
+		id = BIM_textiel_fabrieken
+		icon = GFX_focus_generic_aluminum
+		prerequisite = { focus = BIM_kaukasus_olie_velden }
+		x = 8
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		    add_resource = {
+				type = aluminium
+				amount = 8
+				state = 342
+			}
+		}
+	}
+	focus = {
+		id = BIM_synthetisch_rubber
+		icon = GFX_focus_generic_rubber
+		prerequisite = { focus = BIM_textiel_fabrieken }
+		x = 7
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BIM_coal_liquidization
+				bonus = 0.5
+				uses = 1
+				category = synth_resources
+			}
+		    add_resource = {
+				type = rubber
+				amount = 8
+				state = 47
+			}
+		}
+	}
+	focus = {
+		id = BIM_verbeter_onze_synthetische_werken
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = BIM_textiel_fabrieken }
+		x = 9
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = BIM_coal_liquidization
+				bonus = 0.5
+				uses = 1
+				category = synth_resources
+			}
+		    add_resource = {
+				type = rubber
+				amount = 10
+				state = 47
+			}
+		}
+	}
+	focus = {
+		id = BIM_engels_koloniaal_rubber
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = BIM_synthetisch_rubber }
+		mutually_exclusive = { focus = BIM_duits_synthetisch_rubber }
+		x = 5
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				ENG = {
+				add_opinion_modifier = { target = BIM modifier = ger_ita_alliance_focus }
+			}
+		add_popularity = { ideology = democratic popularity = 0.03 }
+		    add_resource = {
+				type = rubber
+				amount = 6
+				state = 47
+			}
+		}
+	}
+    focus = {
+		id = BIM_duits_synthetisch_rubber
+		icon = GFX_focus_chi_mission_to_germany
+		prerequisite = { focus = BIM_synthetisch_rubber }
+		mutually_exclusive = { focus = BIM_engels_koloniaal_rubber }
+		x = 7
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = { target = BIM modifier = ger_ita_alliance_focus }
+			}
+		add_popularity = { ideology = fascism popularity = 0.03 }
+		    add_resource = {
+				type = rubber
+				amount = 6
+				state = 47
+			}
+		}
+	}
+	focus = {
+		id = BIM_onze_nieuwe_verbeterde_economie
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = BIM_duits_synthetisch_rubber focus = BIM_engels_koloniaal_rubber }
+		prerequisite = { focus = BIM_thicc_universiteit }
+		prerequisite = { focus = BIM_trein_sporen_voor_staal_handel }
+		prerequisite = { focus = BIM_trein_sporen_naar_de_tungsten_mijnen }
+		prerequisite = { focus = BIM_thicc_treinwerk }
+		mutually_exclusive = { focus = BIM_engels_koloniaal_rubber }
+		x = 8
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_ideas = BIM_onze_nieuwe_economie
+		}
+	}
+	focus = {
+		id = BIM_forten_in_het_noorden
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = BIM_onze_industrie }
+		x = 16
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			185 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9805
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3914
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 841
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9837
+					instant_build = yes
+				}
+			}	
+			184 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 6990
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 9791
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11774
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11905
+					instant_build = yes
+				}
+			}	
+			341 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 11842
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 922
+					instant_build = yes
+				}
+			}		
+			731 = {
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 936
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 3
+					province = 3562
+					instant_build = yes
+				}
+			}
+			}   
+		}
+	focus = {
+		id = BIM_politiek
+		icon = GFX_goal_generic_demand_territory
+		x = 38
+		y = 0
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+         add_political_power = 120
+		}
+	}
+	
+	focus = {
+		id = BIM_broederschap
+		icon = GFX_focus_ger_reichskommisariats
+		prerequisite = { focus = BIM_politiek }
+		mutually_exclusive = { focus = BIM_gelijkheid focus = BIM_de_monarchie focus = BIM_vrijheid }
+		x = 30
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            add_ideas = nationalism
+		}
+	}
+	
+	focus = {
+		id = BIM_gelijkheid
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = BIM_politiek }
+		mutually_exclusive = { focus = BIM_broederschap focus = BIM_de_monarchie focus = BIM_vrijheid }
+		x = 35
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+           add_ideas = internationalism
+		}
+	}
+	
+	focus = {
+		id = BIM_vrijheid
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = BIM_politiek }
+		mutually_exclusive = { focus = BIM_broederschap focus = BIM_de_monarchie focus = BIM_gelijkheid }
+		x = 47
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+            add_ideas = BIM_vrijheid
+		}
+	}
+	
+	focus = {
+		id = BIM_de_monarchie
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = BIM_politiek }
+		mutually_exclusive = { focus = BIM_broederschap focus = BIM_vrijheid focus = BIM_gelijkheid }
+		x = 42
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_monarchie
+			
+		}
+	}
+	
+    focus = {
+		id = BIM_hitlers_fascisme
+		icon = GFX_focus_rom_abdicate
+		prerequisite = { focus = BIM_broederschap }
+		mutually_exclusive = { focus = BIM_timos_fascisme }
+		x = 31
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_hitler_fascism
+		}
+	}
+
+	focus = {
+		id = BIM_timos_fascisme
+		icon = GFX_focus_rom_handle_king
+		prerequisite = { focus = BIM_broederschap }
+		mutually_exclusive = { focus = BIM_hitlers_fascisme }
+		x = 29
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_timos_fascism
+		}
+	}
+	focus = {
+		id = BIM_een_partij_staat
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = BIM_timos_fascisme focus = BIM_hitlers_fascisme }
+		x = 30
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_opposition_supressed
+		}
+	}
+	focus = {
+		id = BIM_nationalistische_educatie
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = BIM_een_partij_staat }
+		x = 30
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+          add_ideas = BIM_nationalistische_educatie
+		}
+	}
+	focus = {
+		id = BIM_meer_industrialisatie
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BIM_een_partij_staat }
+		x = 32
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		47 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		186 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+		}
+	}
+}
+	focus = {
+		id = BIM_geef_werk_aan_de_mensen
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = BIM_meer_industrialisatie }
+		x = 32
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		731 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		341 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+		
+		}
+	}
+}
+	focus = {
+		id = BIM_proffesionele_wetenschappers
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { focus = BIM_nationalistische_educatie }
+		x = 30
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = BIM_sluit_aan_bij_de_axis
+		icon = GFX_focus_chi_mission_to_germany
+		mutually_exclusive = { focus = BIM_axis_van_het_midden_oosten }
+		prerequisite = { focus = BIM_een_partij_staat }
+		available = {
+		has_government = fascism
+		}
+		x = 28
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			GER = { country_event = { id = germany.132 } }
+		}
+	}
+	focus = {
+		id = BIM_duitse_technologie
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = BIM_sluit_aan_bij_de_axis }
+		x = 28
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				name = mech_army_bonus
+				technology = basic_medium_tank
+				technology = improved_medium_tank
+				technology = advanced_medium_tank
+				technology = mechanised_infantry
+			}
+		}
+	}
+	focus = {
+		id = BIM_verwijder_de_oppositsie
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = BIM_proffesionele_wetenschappers }
+		x = 30
+		y = 6
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_oppositie_verwijderd
+		}
+	}
+	focus = {
+		id = BIM_axis_van_het_midden_oosten
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		prerequisite = { focus = BIM_een_partij_staat }
+		mutually_exclusive = { focus = BIM_sluit_aan_bij_de_axis }
+		bypass = {
+		is_in_faction = yes
+		}
+		available = {
+		has_government = fascism
+		}
+		x = 26
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_faction = balkan_axis
+		}
+	}
+	focus = {
+		id = BIM_deel_technologie
+		icon = GFX_focus_wonderweapons
+		prerequisite = { focus = BIM_axis_van_het_midden_oosten }
+		available = {
+			is_in_faction = yes
+			OR = {
+				num_of_factories > 50
+				any_other_country = {
+					is_in_faction_with = ROOT
+					num_of_factories > 25
+				}
+			}
+		}
+		x = 26
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_research_slots > 2
+				}
+				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 0.5
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}	
+				add_tech_bonus = {
+					name = infantry_artillery_bonus #@#
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+					category = artillery
+				}				
+			}			
+		}
+	}	
+	focus = {
+		id = BIM_stalins_manier
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = BIM_gelijkheid }
+		mutually_exclusive = { focus = BIM_socialisme }
+		x = 34
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_stalin_manier
+		}
+	}
+	focus = {
+		id = BIM_socialisme
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = BIM_gelijkheid }
+		mutually_exclusive = { focus = BIM_stalins_manier }
+		x = 36
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_socialisme
+		}
+	}
+	focus = {
+		id = BIM_verbeter_relaties_met_de_russen
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = BIM_stalins_manier }
+		x = 32
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				SOV = {
+				add_opinion_modifier = { target = BIM modifier = ger_ita_alliance_focus }
+				add_ideas = communist_influence
+		}
+    }  }	
+	focus = {
+		id = BIM_een_wapen_in_elke_hand
+		icon = GFX_focus_generic_combined_arms
+		prerequisite = { focus = BIM_stalins_manier }
+		x = 34
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_wapen_elke_hand
+		}
+	}
+	focus = {
+		id = BIM_sluit_aan_bij_de_comintern
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = BIM_een_wapen_in_elke_hand focus = BIM_verbeter_relaties_met_de_russen }
+		bypass = {
+		is_in_faction = yes
+		}
+		available = {
+		has_government = communism
+		}
+		x = 34
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			SOV = { country_event = { id = soviet.68 }}
+		}
+	}
+	focus = {
+		id = BIM_kwaliteit_boven_alles
+		icon = GFX_goal_continuous_reduce_training_time
+		prerequisite = { focus = BIM_socialisme }
+		x = 36
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 0.5
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}	
+				add_tech_bonus = {
+					name = infantry_bonus
+					bonus = 0.5
+					uses = 1
+					category = infantry_weapons
+				}
+				add_tech_bonus = {
+					name = infantry_artillery_bonus
+					bonus = 0.5
+					uses = 1
+					category = artillery
+					category = infatry_weapons
+				}
+		}
+	}
+	focus = {
+		id = BIM_communisme_in_de_balkan
+		icon = GFX_goal_support_fourth_int
+		prerequisite = { focus = BIM_socialisme }
+		available = {
+		has_government = communism
+		}
+		x = 38
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		YUG = {
+				add_ideas = communist_influence
+		  }
+		BUL = {
+				add_ideas = communist_influence
+		  }
+		HUN = {
+				add_ideas = communist_influence
+		  }
+		ROM = {
+				add_ideas = communist_influence
+		  }
+		}
+	}
+	focus = {
+		id = BIM_communistische_broederschap
+		icon = GFX_focus_prc_agrarian_socialism
+		prerequisite = { focus = BIM_kwaliteit_boven_alles focus = BIM_communisme_in_het_midden_oosten }
+		bypass = {
+		is_in_faction = yes
+		}
+		available = {
+		has_government = communism
+		}
+		x = 36
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_faction = balkan_arbeider_congress
+		}
+	}
+	focus = {
+		id = BIM_communistische_jeugd
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = BIM_sluit_aan_bij_de_comintern focus = BIM_communistische_broederschap }
+		x = 35
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_commie_jeugd
+		}
+	}
+	focus = {
+		id = BIM_communistische_wetenschap
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = BIM_sluit_aan_bij_de_comintern focus = BIM_communistische_broederschap }
+		x = 37
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = BIM_de_zuivering
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = BIM_sluit_aan_bij_de_comintern focus = BIM_communistische_broederschap }
+		x = 39
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_de_zuivering
+		}
+	}
+	focus = {
+		id = BIM_blijf_neutraal
+		icon = GFX_goal_generic_defence
+		mutually_exclusive = { focus = BIM_een_nieuw_rijk }
+		prerequisite = { focus = BIM_de_monarchie }
+		x = 43
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_neutraalheid
+		}
+	}
+	focus = {
+		id = BIM_een_nieuw_rijk
+		icon = GFX_focus_ger_return_of_the_kaiser
+		prerequisite = { focus = BIM_de_monarchie }
+		mutually_exclusive = { focus = BIM_blijf_neutraal }
+		x = 41
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_nieuw_rijk
+		}
+	}
+	focus = {
+		id = BIM_monarchie_propaganda
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = BIM_een_nieuw_rijk }
+		x = 40
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_monarchie_propaganda
+		}
+	}
+	focus = {
+		id = BIM_koning_BIMiot
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = BIM_monarchie_propaganda }
+		x = 39
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_koning_BIMiot
+		}
+	}
+	focus = {
+		id = BIM_nieuwe_manieren_van_wetenschap
+		icon = GFX_focus_research
+		prerequisite = { focus = BIM_monarchie_propaganda }
+		x = 41
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = BIM_verdedig_het_moederland
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = BIM_blijf_neutraal }
+		x = 42
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_fortificatie_focus
+		}
+	}
+	focus = {
+		id = BIM_mobilizeer_voor_het_moederland
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = BIM_blijf_neutraal }
+		x = 44
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+			add_ideas = BIM_mobilizeer_moederland
+		}
+	}
+	focus = {
+		id = BIM_vrede_industrie
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = BIM_verdedig_het_moederland focus = BIM_mobilizeer_voor_het_moederland }
+		x = 43
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		339 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		340 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+		
+		}
+}	}
+	focus = {
+		id = BIM_vooruitgang_in_de_wetenschap
+		icon = GFX_focus_research2
+		prerequisite = { focus = BIM_vrede_industrie }
+		x = 43
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+			}
+		}
+	focus = {
+		id = BIM_beperkte_interventie
+		icon = GFX_goal_generic_allies_build_infantry
+		prerequisite = { focus = BIM_vrijheid }
+		mutually_exclusive = { focus = BIM_interventie }
+		x = 48
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_rule = { can_send_volunteers = yes }
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = BIM_interventie
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = BIM_vrijheid }
+		mutually_exclusive = { focus = BIM_beperkte_interventie }
+		x = 46
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+         add_ideas = BIM_interventie1
+		} 
+	}
+	focus = {
+		id = BIM_focus_op_de_handel
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = { focus = BIM_beperkte_interventie }
+		x = 50
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = BIM_bouw_forten
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		prerequisite = { focus = BIM_beperkte_interventie }
+		x = 48
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_fortificatie_focus
+		}
+	}
+	focus = {
+		id = BIM_verklaar_neutraliteit
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = BIM_focus_op_de_handel focus = BIM_bouw_forten }
+		x = 51
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = BIM_verbeter_relaties_met_de_britten
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = BIM_interventie }
+		x = 46
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				ENG = {
+				add_opinion_modifier = { target = BIM modifier = ger_ita_alliance_focus }
+				add_ideas = democratic_influence
+			}
+		}
+	}
+	focus = {
+		id = BIM_sluit_aan_bij_de_geallieerden
+		icon = GFX_goal_generic_intBIMigence_exchange
+		prerequisite = { focus = BIM_verbeter_relaties_met_de_britten }
+		mutually_exclusive = { focus = BIM_anti_revolutionairen }
+		bypass = {
+		is_in_faction = yes
+		}
+		x = 45
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			ENG = { country_event = { id = britain.32 } }
+			}
+		}
+	focus = {
+		id = BIM_anti_revolutionairen
+		icon = GFX_focus_AST_never_gallipoli
+		prerequisite = { focus = BIM_verbeter_relaties_met_de_britten }
+		mutually_exclusive = { focus = BIM_sluit_aan_bij_de_geallieerden }
+		x = 47
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_faction = anti_revolutionairen
+		}
+	}
+	focus = {
+		id = BIM_britse_wetenschap
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { focus = BIM_sluit_aan_bij_de_geallieerden }
+		x = 45
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = BIM_embargo_duitsland
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = BIM_anti_revolutionairen }
+		x = 47
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = { target = BIM modifier = embargo }
+			}
+		}
+	}
+	focus = {
+		id = BIM_embargo_de_russen
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = BIM_anti_revolutionairen }
+		x = 48
+		y = 6
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			SOV = {
+				add_opinion_modifier = { target = BIM modifier = embargo }
+			}
+		}
+	}
+	focus = {
+		id = BIM_neutrale_wetenschap
+		icon = GFX_focus_research
+		prerequisite = { focus = BIM_anti_revolutionairen }
+		x = 48
+		y = 7
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = BIM_mobilizeer_de_reserven
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = BIM_embargo_duitsland focus = BIM_britse_wetenschap }
+		x = 46
+		y = 7
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = BIM_mobilizeer_de_reserven1
+		}
+	}
+	focus = {
+		id = BIM_verspreid_democratie_met_het_leger
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = BIM_verbeter_relaties_met_de_britten }
+		available = {
+		has_government = democratic
+		}
+		mutually_exclusive = { focus = BIM_sluit_aan_bij_de_geallieerden focus = BIM_anti_revolutionairen }
+		x = 49
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+	focus = {
+		id = BIM_val_bulgarije_aan
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = BIM_verspreid_democratie_met_het_leger }
+		x = 49
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = BUL
+			}
+		}
+	}
+	focus = {
+		id = BIM_val_yugoslavie_aan
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = BIM_verspreid_democratie_met_het_leger }
+		x = 51
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = YUG
+			}
+		}
+	}
+	focus = {
+		id = BIM_val_roemenie_aan
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = BIM_verspreid_democratie_met_het_leger }
+		x = 53
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ROM
+			}
+		}
+	}
+	focus = {
+		id = BIM_de_nieuwe_wetenschappers
+		icon = GFX_goal_generic_scientific_exchange
+		prerequisite = { focus = BIM_val_bulgarije_aan focus = BIM_val_yugoslavie_aan focus = BIM_val_roemenie_aan }
+		x = 51
+		y = 6
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = BIM_uitbreiding
+		icon = GFX_focus_generic_strike_at_democracy2
+		available = {
+		OR = {
+		has_completed_focus = BIM_een_nieuw_rijk
+		has_government = fascism 
+		has_government = communism}
+
+		}
+		x = 22
+		y = 4
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = BIM_eis_albanie
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = BIM_uitbreiding }
+		available = {
+		has_army_manpower = { size > 175000 }
+		}
+		x = 21
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			BIM = { country_event = { id = bim.3 } }
+		}
+	}
+	focus = {
+		id = BIM_eis_bulgarije
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = BIM_eis_albanie }
+		available = {
+		has_army_manpower = { size > 250000 }
+		}
+		x = 21
+		y = 6
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			BIM = { country_event = { id = bim.5 } }
+		}
+	}
+	focus = {
+		id = BIM_eis_cyprus
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = BIM_eis_macedonie }
+		available = {
+		has_army_manpower = { size > 225000 }
+		}
+		x = 23
+		y = 6
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			BIM = { country_event = { id = bim.9 } }
+		}
+	}
+	focus = {
+		id = BIM_eis_macedonie
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = BIM_uitbreiding }
+		available = {
+		has_army_manpower = { size > 200000 }
+		}
+		x = 23
+		y = 5
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			BIM = { country_event = { id = bim.7 } }
+		}
+	}
+	focus = {
+		id = BIM_split_turkije
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = BIM_eis_bulgarije focus = BIM_eis_cyprus }
+		available = {
+		has_army_manpower = { size > 500000 }
+		}
+		bypass = {
+		controls_state = 343
+		controls_state = 347
+		controls_state = 49
+		controls_state = 346
+		controls_state = 345
+		}
+		x = 22
+		y = 7
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			BIM = { country_event = { id = bim.11 } }
+		}
+	}
+	focus = {
+		id = BIM_intergreer_albanie
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = BIM_split_turkije }
+		x = 21
+		y = 8
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_state_core = 44
+		}
+	}
+	focus = {
+		id = BIM_intergreer_bulgarije
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = BIM_split_turkije }
+		x = 19
+		y = 8
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_state_core = 48	
+			add_state_core = 212
+			add_state_core = 211
+		}
+	}
+	focus = {
+		id = BIM_intergreer_macedonie
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = BIM_split_turkije }
+		x = 23
+		y = 8
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_state_core = 106
+		}
+	}
+	focus = {
+		id = BIM_intergreer_cyprus
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = BIM_split_turkije }
+		x = 25
+		y = 8
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_state_core = 183
+		}
+	}
+	focus = {
+		id = BIM_oorlog_met_rusland
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = BIM_intergreer_cyprus focus = BIM_intergreer_albanie focus = BIM_intergreer_macedonie focus = BIM_intergreer_bulgarije }
+		x = 24
+		y = 9
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+			type = annex_everything
+			target = SOV
+			}
+		}
+	}
+	focus = {
+		id = BIM_oorlog_met_engeland
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = BIM_intergreer_cyprus focus = BIM_intergreer_albanie focus = BIM_intergreer_macedonie focus = BIM_intergreer_bulgarije }
+		x = 22
+		y = 9
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+			type = annex_everything
+			target = ENG
+			}
+		}
+	}
+	focus = {
+		id = BIM_oorlog_met_duitsland
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = BIM_intergreer_cyprus focus = BIM_intergreer_albanie focus = BIM_intergreer_macedonie focus = BIM_intergreer_bulgarije }
+		x = 20
+		y = 9
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+			type = annex_everything
+			target = GER
+			}
+		}
+	}
+		focus = {
+		id = BIM_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 57
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = BIM_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = BIM_army_effort }
+		x = 55
+		y = 1
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = BIM_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = BIM_army_effort }
+		bypass = { has_tech = motorised_infantry }
+		x = 57
+		y = 1
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.75
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = BIM_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = BIM_army_effort }
+		x = 56
+		y = 2
+		relative_position_id = army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = BIM_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = BIM_equipment_effort }
+		x = 56
+		y = 2
+		relative_position_id = equipment_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = BIM_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = BIM_motorization_effort }
+		x = 56
+		y = 2
+		relative_position_id = motorization_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 0.5
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = BIM_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = BIM_doctrine_effort }
+		x = 56
+		y = 2
+		relative_position_id = doctrine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = BIM_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = BIM_equipment_effort_2 }
+		x = 56
+		y = 2
+		relative_position_id = equipment_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 1
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = BIM_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = BIM_mechanization_effort }
+		x = 56
+		y = 2
+		relative_position_id = mechanization_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = BIM_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = BIM_equipment_effort_3 }
+		prerequisite = { focus = BIM_doctrine_effort_2 }
+		prerequisite = { focus = BIM_armor_effort }
+		x = 57
+		y = 1
+		relative_position_id = equipment_effort_3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+	
+	focus = {
+		id = BIM_de_economie
+		icon = GFX_goal_generic_consumer_goods
+		x = 24
+		y = 0
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_political_power = 120
+	}
+  } 
+	focus = {
+		id = BIM_hervorm_de_lichte_industrie
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = BIM_de_economie }
+		x = 23
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				swap_ideas = {
+				remove_idea = economie
+				add_idea = BIM_economie2
+			}
+		}
+	}	
+	focus = {
+		id = BIM_hervorm_de_zware_industrie
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = BIM_de_economie }
+		available = {
+		has_completed_focus = BIM_hervorm_de_lichte_industrie
+		}
+		x = 25
+		y = 1
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				swap_ideas = {
+				remove_idea = BIM_economie2
+				add_idea = BIM_economie3
+			}
+		}
+	}
+	focus = {
+		id = BIM_vraag_om_hulp_aan_landen
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = BIM_hervorm_de_lichte_industrie }
+		available = {
+		has_completed_focus = BIM_hervorm_de_zware_industrie
+		}
+		x = 23
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				swap_ideas = {
+				remove_idea = BIM_economie3
+				add_idea = BIM_economie4
+			}
+		}
+	}
+	focus = {
+		id = BIM_investeer_meer_in_fabrieken
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = BIM_hervorm_de_zware_industrie }
+		available = {
+		has_completed_focus = BIM_vraag_om_hulp_aan_landen
+		}
+		x = 25
+		y = 2
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+				swap_ideas = {
+				remove_idea = BIM_economie4
+				add_idea = BIM_economie5
+			}
+		}
+	}
+	focus = {
+		id = BIM_einde_van_de_slechte_economie
+		icon = GFX_focus_generic_tank_production
+		prerequisite = { focus = BIM_vraag_om_hulp_aan_landen focus = BIM_investeer_meer_in_fabrieken }
+		x = 24
+		y = 3
+		relative_position_id = army_efforts
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = BIM_economie5
+				add_idea = BIM_economie6
+			}
+		}
+	}
+}

@@ -1,0 +1,3513 @@
+focus_tree = {
+	id = ELL_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ELL
+		}
+	}
+	default = no
+	focus = {
+		id = ELL_vooruitzicht_op_grondstoffen
+		icon = GFX_goal_generic_construction2
+		cost = 5,00
+
+		completion_reward = {
+		add_political_power = 50
+		}
+
+		x = 5
+		y = 1
+
+	}
+	focus = {
+		id = ELL_de_economische_crisis
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10,00
+		x = 17
+		y = 1
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		add_political_power = 50
+				swap_ideas = {
+				remove_idea = ELL_economische_crisis
+				add_idea = ELL_economische_crisis1
+			}
+		}
+
+	}
+	focus = {
+		id = ELL_het_leger
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10,00
+		x = 30
+		y = 1
+        
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = ELL_onze_lucht_macht
+		icon = GFX_goal_generic_build_airforce
+		cost = 10,00
+		x = 39
+		y = 1
+
+		completion_reward = {
+		air_experience = 25
+		231 = { add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+		}
+	  }
+	}
+	focus = {
+		id = ELL_eltons_marine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10,00
+		x = 46
+		y = 1
+
+		completion_reward = {
+		navy_experience = 20
+		add_building_construction = {
+					type = naval_base
+					province = 11617
+					level = 2
+					instant_build = yes
+				}	
+		add_building_construction = {
+					type = naval_base
+					province = 3698
+					level = 2
+					instant_build = yes
+				}
+		}			
+	}
+	focus = {
+		id = ELL_hervorm_de_politiek
+		icon = GFX_goal_generic_demand_territory
+		cost = 10,00
+		completion_reward = {
+		add_political_power = 150
+		add_stability = 0.05
+		}
+
+		x = 66
+		y = 1
+
+	}
+	focus = {
+		id = ELL_verhoog_de_financiering_van_de_ENG
+		icon = GFX_focus_generic_treaty
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_vooruitzicht_op_grondstoffen
+		}
+
+		completion_reward = {
+			add_ideas = { ELL_de_ENG }
+		}
+
+		x = 3
+		y = 2
+
+	}
+	focus = {
+		id = ELL_vernieuwde_staal_mijnen
+		icon = GFX_focus_generic_steel
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_verhoog_de_financiering_van_de_ENG
+		}
+		x = 2
+		y = 3
+		completion_reward = {
+		add_political_power = 30
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 354
+			}
+		}
+	}
+	focus = {
+		id = ELL_leg_nieuwe_handelsroutes_aan
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_vooruitzicht_op_grondstoffen
+		}
+
+		completion_reward = {
+		231 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = infrastructure
+                    level = 3
+                    instant_build = yes
+                }
+		}
+		233 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = infrastructure
+                    level = 3
+                    instant_build = yes
+                }
+		}
+	 	}
+
+		x = 7
+		y = 2
+
+	}
+	focus = {
+		id = ELL_een_deal_met_turkije
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_verhoog_de_financiering_van_de_ENG
+		}
+		prerequisite = {
+			focus = ELL_leg_nieuwe_handelsroutes_aan
+		}
+
+		completion_reward = {
+		ELL = { country_event = { id = ell.15 days = 1 } }
+		}
+
+		x = 6
+		y = 3
+
+	}
+	focus = {
+		id = ELL_synthetische_industrie
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_vernieuwde_staal_mijnen
+		}
+		prerequisite = {
+			focus = ELL_een_deal_met_turkije
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ELL_coal_liquidization
+				bonus = 0.5
+				uses = 2
+				category = synth_resources
+			}
+			add_resource = {
+				type = rubber
+				amount = 8
+				state = 229
+			}
+		}
+
+		x = 4
+		y = 4
+
+	}
+	focus = {
+		id = ELL_autarkie
+		icon = GFX_focus_NZL_bob_semple_tank
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_synthetische_industrie
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = GER_autarky
+				bonus = 0.5
+				uses = 2
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+			add_ideas = GER_autarky_idea
+		}
+
+		x = 2
+		y = 5
+
+	}
+	focus = {
+		id = ELL_een_deal_met_timo
+		icon = GFX_goal_tripartite_pact
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_een_deal_met_turkije
+		}
+
+		completion_reward = {
+		ELL = { country_event = { id = ell.17 days = 1 } }
+		}
+
+		x = 8
+		y = 4
+
+	}
+	focus = {
+		id = ELL_engels_koloniaal_rubber
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_synthetische_industrie
+		}
+		prerequisite = {
+			focus = ELL_een_deal_met_timo
+		}
+		mutually_exclusive = {
+			focus = ELL_duits_synthetisch_rubber
+		}
+
+		completion_reward = {
+				ENG = {
+				add_opinion_modifier = { target = ELL modifier = ger_ita_alliance_focus }
+			}
+		add_popularity = { ideology = democratic popularity = 0.03 }
+		    add_resource = {
+				type = rubber
+				amount = 6
+				state = 231
+			}
+		}
+
+		x = 7
+		y = 5
+
+	}
+	focus = {
+		id = ELL_ontwikkel_de_prive_sector
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_economische_crisis
+		}
+		mutually_exclusive = {
+			focus = ELL_ontwikkel_de_zware_industrie
+		}
+
+		completion_reward = {
+		231 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		233 = {
+				add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 1
+                    instant_build = yes
+                }
+		}
+	    }
+
+		x = 13
+		y = 2
+
+	}
+	focus = {
+		id = ELL_onmiddelijke_constructie
+		icon = GFX_focus_generic_industry_2
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_ontwikkel_de_prive_sector
+		}
+		mutually_exclusive = {
+			focus = ELL_4_jaar_plan
+		}
+
+		completion_reward = {
+		add_stability = -0.05
+
+	    231 = {
+                add_extra_state_shared_building_slots = 3
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 3
+                    instant_build = yes
+                }
+		}
+		}
+
+		x = 11
+		y = 3
+
+	}
+	focus = {
+		id = ELL_elliots_huisvesting_act
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_onmiddelijke_constructie
+		}
+
+		completion_reward = {
+		add_ideas = { ELL_huisvesting_act }
+		}
+
+		x = 11
+		y = 4
+
+	}
+	focus = {
+		id = ELL_de_nationale_spoorwegen_dienst
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_elliots_huisvesting_act
+		}
+		x = 11
+		y = 5
+
+		completion_reward = {
+		353 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		232 = {
+                add_building_construction = {
+                    type = infrastructure
+                    level = 2
+                    instant_build = yes
+                }
+		}
+	  }
+
+	}
+	focus = {
+		id = ELL_4_jaar_plan
+		icon = GFX_goal_generic_position_armies
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_ontwikkel_de_prive_sector
+		}
+		mutually_exclusive = {
+			focus = ELL_onmiddelijke_constructie
+		}
+
+		completion_reward = {
+		231 = {
+                add_extra_state_shared_building_slots = 2
+          }
+        229 = {
+                add_extra_state_shared_building_slots = 2	
+            }
+        233 = {
+                add_extra_state_shared_building_slots = 2
+            }				
+		}
+
+		x = 15
+		y = 3
+
+	}
+	focus = {
+		id = ELL_radio_ENO
+		icon = GFX_goal_generic_propaganda
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_onmiddelijke_constructie
+			focus = ELL_4_jaar_plan
+		}
+
+		completion_reward = {
+		add_stability = 0.05
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = electronics
+			}
+		add_ideas = { ELL_radio_ENO }
+		}
+
+		x = 13
+		y = 4
+
+	}
+	focus = {
+		id = ELL_vooruit_planning_van_constructie
+		icon = GFX_goal_generic_production
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_4_jaar_plan
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 0.5
+				uses = 2
+				category = industry
+			}
+		}
+
+		x = 15
+		y = 4
+
+	}
+	focus = {
+		id = ELL_verhoog_de_financiering_van_de_ICE
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_vooruit_planning_van_constructie
+		}
+		x = 15
+		y = 5
+		completion_reward = {
+				swap_ideas = {
+				remove_idea = ELL_economische_crisis1
+				add_idea = ELL_economische_crisis2
+			}
+		}
+	}
+	focus = {
+		id = ELL_technologische_vooruitgangen
+		icon = GFX_focus_research
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_nationale_spoorwegen_dienst
+			focus = ELL_verhoog_de_financiering_van_de_ICE
+		}
+
+		completion_reward = {
+		add_research_slot = 1
+		}
+
+		x = 13
+		y = 6
+
+	}
+	focus = {
+		id = ELL_ontwikkel_de_zware_industrie
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_economische_crisis
+		}
+		mutually_exclusive = {
+			focus = ELL_ontwikkel_de_prive_sector
+		}
+
+		completion_reward = {
+		231 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		233 = {
+				add_extra_state_shared_building_slots = 1
+                add_building_construction = {
+                    type = arms_factory
+                    level = 1
+                    instant_build = yes
+                }
+		}
+	    }
+
+		x = 21
+		y = 2
+
+	}
+	focus = {
+		id = ELL_militaire_bouw_wet
+		icon = GFX_goal_generic_fortify_city
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_ontwikkel_de_zware_industrie
+		}
+		mutually_exclusive = {
+			focus = ELL_de_nationale_wapen_wet
+		}
+
+		completion_reward = {
+		add_political_power = 50
+		add_ideas = { ELL_militaire_bouw_wet }
+		}
+
+		x = 19
+		y = 3
+
+	}
+	focus = {
+		id = ELL_het_nationale_arsenaal
+		icon = GFX_focus_secret_rearmament
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_militaire_bouw_wet
+		}
+
+		completion_reward = {
+		army_experience = 5
+		231 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		}
+
+		x = 19
+		y = 4
+
+	}
+	focus = {
+		id = ELL_verhoog_de_financiering_van_de_NWBE
+		icon = GFX_goal_continuous_reduce_training_time
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_het_nationale_arsenaal
+		}
+
+		completion_reward = {
+		add_ideas = { ELL_de_NWBE }
+		}
+		
+
+		x = 19
+		y = 5
+
+	}
+	focus = {
+		id = ELL_de_nationale_wapen_wet
+		icon = GFX_goal_generic_small_arms
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_ontwikkel_de_zware_industrie
+		}
+		mutually_exclusive = {
+			focus = ELL_militaire_bouw_wet
+		}
+
+		completion_reward = {
+		add_ideas = { ELL_nationale_wapen_wet }
+		}
+
+		x = 23
+		y = 3
+
+	}
+	focus = {
+		id = ELL_de_nieuwe_ENIGMA_machine
+		icon = GFX_goal_generic_radar
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_militaire_bouw_wet
+			focus = ELL_de_nationale_wapen_wet
+		}
+
+		completion_reward = {
+		add_ideas = { ELL_de_nieuwe_ENIGMA_machine }
+		}
+
+		x = 21
+		y = 4
+
+	}
+	focus = {
+		id = ELL_de_veiligheid_van_onze_mensen
+		icon = GFX_goal_generic_defence
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_nationale_wapen_wet
+		}
+
+		completion_reward = {
+		add_ideas = { ELL_veiligheid_van_onze_mensen }
+		}
+
+		x = 23
+		y = 4
+
+	}
+	focus = {
+		id = ELL_suprieure_vuurkracht
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_het_leger
+		}
+		mutually_exclusive = {
+			focus = ELL_een_mobiel_leger
+		}
+
+		completion_reward = {
+		add_ideas = { ELL_superieure_vuurkracht }
+		}
+
+		x = 28
+		y = 2
+
+	}
+	focus = {
+		id = ELL_nieuwe_artillerie_designs
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_suprieure_vuurkracht
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = artillery
+			}
+		}
+
+		x = 28
+		y = 3
+
+	}
+	focus = {
+		id = ELL_nieuwe_wapen_designs
+		icon = GFX_goal_generic_army_artillery
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_nieuwe_artillerie_designs
+			focus = ELL_de_nationale_wapen_wet
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+
+		x = 26
+		y = 4
+
+	}
+	focus = {
+		id = ELL_een_mix_van_beide
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_veiligheid_van_onze_mensen
+			focus = ELL_nieuwe_wapen_designs
+		}
+
+		completion_reward = {
+		231 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = arms_factory
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		233 = {
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+		}
+		}
+
+		x = 23
+		y = 5
+
+	}
+	focus = {
+		id = ELL_militairistische_technologische_verbeteringen
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_verhoog_de_financiering_van_de_NWBE
+			focus = ELL_een_mix_van_beide
+		}
+
+		completion_reward = {
+		add_research_slot = 1
+		}
+
+		x = 21
+		y = 6
+
+	}
+	focus = {
+		id = ELL_nieuwe_oorlogs_doctrines
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_nieuwe_artillerie_designs
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+
+		x = 28
+		y = 4
+
+	}
+	focus = {
+		id = ELL_een_wapen_in_elke_hand
+		icon = GFX_goal_generic_military_sphere
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_nieuwe_wapen_designs
+		}
+		prerequisite = {
+			focus = ELL_nieuwe_oorlogs_doctrines
+		}
+
+		completion_reward = {
+			add_ideas = ELL_wapen_elke_hand
+		}
+
+		x = 28
+		y = 5
+
+	}
+	focus = {
+		id = ELL_een_mobiel_leger
+		icon = GFX_goal_generic_cavalry
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_het_leger
+		}
+		mutually_exclusive = {
+			focus = ELL_suprieure_vuurkracht
+		}
+
+		completion_reward = {
+		add_ideas = { ELL_een_mobiel_leger }
+		}
+
+		x = 32
+		y = 2
+
+	}
+	focus = {
+		id = ELL_motorisatie_van_het_leger
+		icon = GFX_goal_generic_army_motorized
+		cost = 10,00
+		bypass = { has_tech = motorised_infantry }
+		prerequisite = {
+			focus = ELL_een_mobiel_leger
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.75
+				technology = motorised_infantry
+			}
+		}
+		x = 32
+		y = 3
+
+	}
+	focus = {
+		id = ELL_tank_prototypes
+		icon = GFX_goal_generic_army_tanks
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_motorisatie_van_het_leger
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 0.5
+				uses = 2
+				category = armor
+			}
+		}
+
+		x = 32
+		y = 4
+
+	}
+	focus = {
+		id = ELL_mobiele_oorlogs_doctrines
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_tank_prototypes
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+		}
+
+		x = 30
+		y = 5
+
+	}
+	focus = {
+		id = ELL_jacht_vliegtuigen
+		icon = GFX_goal_generic_air_fighter
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_onze_lucht_macht
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ELL_fighter_focus
+				bonus = 0.5
+				uses = 1
+				category = light_fighter
+			}
+		}
+
+		x = 38
+		y = 2
+
+	}
+	focus = {
+		id = ELL_bommenwerpers
+		icon = GFX_goal_generic_air_bomber
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_onze_lucht_macht
+		}
+		x = 40
+		y = 2
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ELL_bomber_focus
+				bonus = 0.5
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+
+	}
+	focus = {
+		id = ELL_nieuwe_vliegvelden
+		icon = GFX_goal_generic_construction
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_jacht_vliegtuigen
+		}
+		prerequisite = {
+			focus = ELL_bommenwerpers
+		}
+
+		completion_reward = {
+		419 = { add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+		}
+		233 = { add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+		}
+	  }
+
+		x = 39
+		y = 3
+
+	}
+	focus = {
+		id = ELL_vlieg_tactieken
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_nieuwe_vliegvelden
+		}
+		x = 39
+		y = 4
+
+		completion_reward = {
+			air_experience = 25
+
+			add_tech_bonus = {
+				name = ELL_air_doctrine
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+
+	}
+	focus = {
+		id = ELL_de_parachutisten
+		icon = GFX_focus_generic_paratrooper
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_tank_prototypes
+			focus = ELL_vlieg_tactieken
+		}
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+			}
+		}
+
+		x = 34
+		y = 5
+
+	}
+	focus = {
+		id = ELL_olie_reserves
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_mobiele_oorlogs_doctrines
+		}
+		prerequisite = {
+			focus = ELL_de_parachutisten
+		}
+
+		completion_reward = {
+		add_political_power = 30
+			add_resource = {
+				type = oil
+				amount = 12
+				state = 354
+			}
+			add_resource = {
+				type = oil
+				amount = 4
+				state = 233
+			}
+		}
+
+		x = 32
+		y = 6
+
+	}
+	focus = {
+		id = ELL_zware_jachtvliegtuigen
+		icon = GFX_goal_generic_air_fighter2
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_vlieg_tactieken
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ELL_heavy_fighter_focus
+				bonus = 0.5
+				uses = 2
+				category = cat_heavy_fighter
+			}
+		}
+
+		x = 37
+		y = 6
+
+	}
+	focus = {
+		id = ELL_eltons_vliegveld
+		icon = GFX_goal_generic_air_production
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_vlieg_tactieken
+		}
+		completion_reward = {
+		419 = { add_building_construction = {
+					type = air_base
+					level = 4
+					instant_build = yes
+				}
+		}
+		}
+		x = 40
+		y = 5
+
+	}
+	focus = {
+		id = ELL_grond_support
+		icon = GFX_goal_generic_CAS
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_eltons_vliegveld
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ELL_cas_focus
+				bonus = 0.5
+				uses = 2
+				category = cas_bomber
+			}
+		}
+
+		x = 40
+		y = 6
+
+	}
+	focus = {
+		id = ELL_een_grote_vloot
+		icon = GFX_focus_generic_cruiser2
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_eltons_marine
+		}
+		mutually_exclusive = {
+			focus = ELL_verdedigers_van_de_zwarte_zee
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ELL_battleship_primacy
+				bonus = 0.5
+				uses = 2
+				category = bb_tech
+			}
+		}
+
+		x = 44
+		y = 2
+
+	}
+	focus = {
+		id = ELL_gevechts_schepen
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_een_grote_vloot
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ELL_capital_ship_focus
+				bonus = 0.5
+				uses = 2
+				category = bb_tech
+				category = bc_tech
+			}
+		}
+
+		x = 44
+		y = 3
+
+	}
+	focus = {
+		id = ELL_zeebommenwerpers
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_gevechts_schepen
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ELL_naval_bomber_focus
+				bonus = 0.5
+				uses = 2
+				category = naval_bomber
+			}
+		}
+
+		x = 44
+		y = 4
+
+	}
+	focus = {
+		id = ELL_vliegdekschepen
+		icon = GFX_goal_generic_navy_carrier
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_zeebommenwerpers
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ELL_carrier_focus
+				bonus = 0.5
+				uses = 2
+				category = cv_tech
+			}
+		}
+
+		x = 44
+		y = 5
+
+	}
+	focus = {
+		id = ELL_verdedigers_van_de_zwarte_zee
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_eltons_marine
+		}
+		mutually_exclusive = {
+			focus = ELL_een_grote_vloot
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = ELL_improved_screen_ships
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+				category = cl_tech
+			}
+		}
+
+		x = 48
+		y = 2
+
+	}
+	focus = {
+		id = ELL_de_ALT
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_een_grote_vloot
+			focus = ELL_verdedigers_van_de_zwarte_zee
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ELL_amphibious_operations
+				bonus = 0.5
+				uses = 2
+				category = tp_tech
+			}
+		}
+
+		x = 46
+		y = 3
+
+	}
+	focus = {
+		id = ELL_duikboot_designs
+		icon = GFX_goal_generic_navy_submarine
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_verdedigers_van_de_zwarte_zee
+		}
+
+		completion_reward = {
+		add_tech_bonus = {
+				name = ELL_u_boat_effort
+				bonus = 0.5
+				uses = 2
+				category = ss_tech
+			}
+		}	
+		x = 48
+		y = 3
+
+	}
+	focus = {
+		id = ELL_torpedo_jagers
+		icon = GFX_goal_generic_navy_anti_submarine
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_duikboot_designs
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+			}
+		}
+
+		x = 48
+		y = 4
+
+	}
+	focus = {
+		id = ELL_zeegevechts_tactieken
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_zeebommenwerpers
+			focus = ELL_torpedo_jagers
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = ELL_naval_doctrine
+				bonus = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+
+		x = 46
+		y = 5
+
+	}
+	focus = {
+		id = ELL_nieuwe_havens
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_zeegevechts_tactieken
+		}
+
+		completion_reward = {
+
+			354 = {	add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = dockyard
+							level = 2
+							instant_build = yes
+						}
+			}
+			233 = {	add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = dockyard
+							level = 2
+							instant_build = yes
+						}
+			}
+		}		
+		x = 46
+		y = 6
+
+	}
+	focus = {
+		id = ELL_geef_de_NSE_meer_kracht_in_de_regering
+		icon = GFX_focus_ger_reichskommisariats
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_hervorm_de_politiek
+		}
+		mutually_exclusive = {
+			focus = ELL_sta_de_CEAP_weer_toe
+			focus = ELL_versterk_de_positie_van_de_VDPE
+			focus = ELL_een_nieuw_geloof_in_de_MGP
+		}
+		completion_reward = {
+            add_ideas = nationalism
+            add_popularity = {
+            	ideology = fascism
+            	popularity = 0.05
+            }
+		}
+		x = 54
+		y = 2
+
+	}
+	focus = {
+		id = ELL_moed_de_fascistische_bijeen_komsten_aan
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_geef_de_NSE_meer_kracht_in_de_regering
+		}
+		completion_reward = {
+		add_stability = -0.03
+            add_popularity = {
+            	ideology = fascism
+            	popularity = 0.1
+            }
+		}
+		x = 53
+		y = 3
+
+	}
+	focus = {
+		id = ELL_verspreid_propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_geef_de_NSE_meer_kracht_in_de_regering
+		}
+
+		completion_reward = {
+			add_ideas = { ELL_fascistische_propaganda }
+		}
+
+		x = 55
+		y = 3
+
+	}
+	focus = {
+		id = ELL_maak_de_NSE_klaar_voor_een_staatsgreep
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_moed_de_fascistische_bijeen_komsten_aan
+		}
+		prerequisite = {
+			focus = ELL_verspreid_propaganda
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_manpower = 20000
+		}
+
+		x = 54
+		y = 4
+
+	}
+	focus = {
+		id = ELL_zwarte_zaterdag
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10,00
+		available = {
+			fascism > 0.35
+		}
+		prerequisite = {
+			focus = ELL_maak_de_NSE_klaar_voor_een_staatsgreep
+		}
+
+		completion_reward = {
+			ELL = { country_event = { id = ell.20} }
+		}
+
+		x = 54
+		y = 5
+
+	}
+	focus = {
+		id = ELL_legitimeer_onze_nieuwe_regering
+		icon = GFX_goal_generic_military_deal
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_zwarte_zaterdag
+		}
+		available = {
+		has_government = fascism
+		}
+
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.1
+			add_war_support = 0.05
+		}
+
+		x = 53
+		y = 6
+
+	}
+	focus = {
+		id = ELL_de_zwart_shirts
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_zwarte_zaterdag
+		}
+		available = {
+		has_government = fascism
+		}
+
+		completion_reward = {
+			add_ideas = { ELL_zwart_shirts }
+		}
+
+		x = 55
+		y = 6
+
+	}
+	focus = {
+		id = ELL_verzeker_de_een_staat_partij
+		icon = GFX_goal_generic_political_pressure
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_legitimeer_onze_nieuwe_regering
+		}
+		prerequisite = {
+			focus = ELL_de_zwart_shirts
+		}
+		available = {
+		has_government = fascism
+		}
+
+		completion_reward = {
+			add_ideas = ELL_opposition_supressed
+		}
+
+		x = 54
+		y = 7
+
+	}
+	focus = {
+		id = ELL_de_politiek_met_de_russen
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_verzeker_de_een_staat_partij
+		}
+
+		completion_reward = {
+		add_political_power = 120
+		}
+
+		x = 51
+		y = 8
+
+	}
+	focus = {
+		id = ELL_grens_garnizoenen
+		icon = GFX_focus_generic_little_entente
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_politiek_met_de_russen
+		}
+
+		completion_reward = {
+				swap_ideas = {
+				remove_idea = immigratie
+				add_idea = ELL_immigratie1
+			}
+		}
+		x = 50
+		y = 9
+
+	}
+	focus = {
+		id = ELL_strengere_grenscontrole
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_politiek_met_de_russen
+		}
+		available = {
+			has_completed_focus = ELL_grens_garnizoenen
+		}
+		completion_reward = {
+				swap_ideas = {
+				remove_idea = ELL_immigratie1
+				add_idea = ELL_immigratie2
+			}
+		}
+
+		x = 52
+		y = 9
+
+	}
+	focus = {
+		id = ELL_indoctrineer_de_jeugd
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_verzeker_de_een_staat_partij
+		}
+
+		available = {
+		has_government = fascism
+		}
+
+		completion_reward = {
+			add_ideas = military_youth_focus
+		}
+
+		x = 55
+		y = 8
+
+	}
+	focus = {
+		id = ELL_paramilitairisme
+		icon = GFX_goal_generic_special_forces
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_verzeker_de_een_staat_partij
+		}
+
+		available = {
+		has_government = fascism
+		}
+
+		completion_reward = {
+			add_ideas = paramilitarism_focus
+		}
+
+		x = 59
+		y = 8
+
+	}
+	focus = {
+		id = ELL_een_deal_met_hitler
+		icon = GFX_focus_chi_mission_to_germany
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_indoctrineer_de_jeugd
+		}
+		prerequisite = {
+			focus = ELL_paramilitairisme
+		}
+		mutually_exclusive = {
+			focus = ELL_open_de_diplomatiek_in_het_midden_oosten
+		}
+
+		available = {
+		has_government = fascism
+		}
+
+		completion_reward = {
+			GER = { country_event = { id = germany.129 } }
+		}
+
+		x = 57
+		y = 9
+
+	}
+	focus = {
+		id = ELL_axis_technologie
+		icon = GFX_goal_continuous_research
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_een_deal_met_hitler
+		}
+
+		available = {
+		has_government = fascism
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					original_research_slots > 2
+				}
+				add_tech_bonus = {
+					name = electronics_bonus
+					bonus = 0.5
+					uses = 1
+					category = electronics
+				}
+				add_tech_bonus = {
+					name = industrial_bonus
+					bonus = 0.5
+					uses = 1
+					category = industry
+				}	
+				add_tech_bonus = {
+					name = infantry_artillery_bonus #@#
+					bonus = 0.5
+					uses = 2
+					category = infantry_weapons
+					category = artillery
+				}				
+			}			
+		}
+
+		x = 57
+		y = 10
+
+	}
+	focus = {
+		id = ELL_het_joden_probleem
+		icon = GFX_goal_generic_attack_allies
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_axis_technologie
+		}
+
+		available = {
+		has_government = fascism
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = { ELL_joden_probleem }
+		}
+
+		x = 56
+		y = 11
+
+	}
+	focus = {
+		id = ELL_de_oliebron_van_de_axis
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_axis_technologie
+		}
+
+		available = {
+		has_government = fascism
+		}
+
+		completion_reward = {
+			if = {
+				limit = { country_exists = GER }
+				reverse_add_opinion_modifier = { target = GER modifier = huge_increase }
+			}
+			if = {
+				limit = { country_exists = ITA }
+				reverse_add_opinion_modifier = { target = ITA modifier = huge_increase }
+			}
+			add_resource = {
+				type = oil
+				amount = 12
+				state = 54
+			}
+			add_resource = {
+				type = oil
+				amount = 12
+				state = 64
+			}
+			add_resource = {
+				type = oil
+				amount = 12
+				state = 162
+			}
+			add_resource = {
+				type = oil
+				amount = 12
+				state = 2
+			}
+		}
+
+		x = 58
+		y = 11
+
+		
+    }
+	focus = {
+		id = ELL_nodig_duitse_wetenschappers_uit
+		icon = GFX_focus_research2
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_het_joden_probleem
+		}
+		prerequisite = {
+			focus = ELL_de_oliebron_van_de_axis
+		}
+
+		available = {
+		has_government = fascism
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		x = 57
+		y = 12
+
+	}
+	focus = {
+		id = ELL_sta_de_CEAP_weer_toe
+		icon = GFX_focus_generic_join_comintern
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_hervorm_de_politiek
+		}
+		mutually_exclusive = {
+			focus = ELL_geef_de_NSE_meer_kracht_in_de_regering
+			focus = ELL_versterk_de_positie_van_de_VDPE
+			focus = ELL_een_nieuw_geloof_in_de_MGP
+		}
+		x = 62
+		y = 2
+
+	}
+	focus = {
+		id = ELL_theoretizeer_een_klasseloze_maatschappij
+		icon = GFX_focus_generic_self_management
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_sta_de_CEAP_weer_toe
+		}
+		x = 60
+		y = 3
+
+	}
+	focus = {
+		id = ELL_maak_de_mensen_klaar_voor_een_burgeroorlog
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_theoretizeer_een_klasseloze_maatschappij
+		}
+		mutually_exclusive = {
+			focus = ELL_communistische_propaganda
+		}
+		x = 60
+		y = 4
+
+	}
+	focus = {
+		id = ELL_communistische_millities
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_maak_de_mensen_klaar_voor_een_burgeroorlog
+		}
+		x = 60
+		y = 5
+
+	}
+	focus = {
+		id = ELL_de_rode_maand
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_communistische_millities
+		}
+		x = 60
+		y = 6
+
+	}
+	focus = {
+		id = ELL_open_de_diplomatiek_in_het_midden_oosten
+		icon = GFX_goal_generic_improve_relations
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_paramilitairisme
+		}
+		prerequisite = {
+			focus = ELL_indoctrineer_de_jeugd
+		}
+		mutually_exclusive = {
+			focus = ELL_een_deal_met_hitler
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			if = {
+				limit = { country_exists = TUR }
+				reverse_add_opinion_modifier = { target = TUR modifier = large_increase }
+			}
+			if = {
+				limit = { country_exists = PER }
+				reverse_add_opinion_modifier = { target = PER modifier = large_increase }
+			}
+			if = {
+				limit = { country_exists = OLA }
+				reverse_add_opinion_modifier = { target = OLA modifier = large_increase }
+			}
+			if = {
+				limit = { country_exists = AFG }
+				reverse_add_opinion_modifier = { target = AFG modifier = large_increase }
+			}			
+	}	
+		x = 60
+		y = 9
+
+	}
+	focus = {
+		id = ELL_versterk_de_banden_met_ollandia_en_thiccland
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_open_de_diplomatiek_in_het_midden_oosten
+		}
+
+		completion_reward = {
+			if = {
+				limit = { country_exists = OLA }
+				reverse_add_opinion_modifier = { target = OLA modifier = huge_increase }
+			}
+			if = {
+				limit = { country_exists = BIM }
+				reverse_add_opinion_modifier = { target = BIM modifier = huge_increase }
+			}
+		}
+
+		x = 60
+		y = 10
+
+	}
+	focus = {
+		id = ELL_olie_handel_met_onze_buren
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_versterk_de_banden_met_ollandia_en_thiccland
+		}
+
+		completion_reward = {
+			add_ideas = liberty_ethos_focus
+			add_resource = {
+				type = chromium
+				amount = 8
+				state = 354
+			}
+			add_resource = {
+				type = tungsten
+				amount = 8
+				state = 352
+			}			
+		}
+
+		x = 60
+		y = 11
+
+	}
+	focus = {
+		id = ELL_de_broederschap_van_het_midden_oosten
+		icon = GFX_goal_generic_military_deal
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_versterk_de_banden_met_ollandia_en_thiccland
+		}
+
+		completion_reward = {
+			create_faction = broederschap_van_het_midden_oosten
+		}
+		
+		x = 62
+		y = 11
+
+	}
+	focus = {
+		id = ELL_het_delen_van_onze_technologieen
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_olie_handel_met_onze_buren
+		}
+		prerequisite = {
+			focus = ELL_de_broederschap_van_het_midden_oosten
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		x = 61
+		y = 12
+
+	}
+	focus = {
+		id = ELL_onze_claims
+		icon = GFX_focus_ELL_de_uitbreiding
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_nodig_duitse_wetenschappers_uit
+			focus = ELL_het_delen_van_onze_technologieen
+		}
+
+		completion_reward = {
+			add_war_support = 0.03
+			add_state_claim = 234
+			add_state_claim = 137
+			add_state_claim = 266
+			add_state_claim = 417
+		}
+
+		x = 59
+		y = 13
+
+	}
+	focus = {
+		id = ELL_eis_tehran
+		icon = GFX_goal_generic_attack_allies
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_onze_claims
+		}
+
+		completion_reward = {
+			ELL = { country_event = { id = ell.0 } }
+		}
+
+		x = 58
+		y = 14
+
+	}
+	focus = {
+		id = ELL_etc2
+		icon = GFX_goal_generic_attack_allies
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_onze_claims
+		}
+
+		completion_reward = {
+		ELL = { country_event = { id = ell.4 } }
+		}
+
+		x = 60
+		y = 14
+
+	}
+	focus = {
+		id = ELL_etc3
+		icon = GFX_goal_generic_attack_allies
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_etc2
+		}
+
+		completion_reward = {
+		ELL = { country_event = { id = ell.6 } }
+		}
+
+		x = 60
+		y = 15
+
+	}
+	focus = {
+		id = ELL_luister_naar_de_boeren
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_sta_de_CEAP_weer_toe
+		}
+		x = 64
+		y = 3
+
+	}
+	focus = {
+		id = ELL_communistische_propaganda
+		icon = GFX_goal_support_fourth_int
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_luister_naar_de_boeren
+		}
+		mutually_exclusive = {
+			focus = ELL_maak_de_mensen_klaar_voor_een_burgeroorlog
+		}
+		x = 64
+		y = 4
+
+	}
+	focus = {
+		id = ELL_moedig_bijeenkomsten_aan
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_communistische_propaganda
+		}
+		x = 64
+		y = 5
+
+	}
+	focus = {
+		id = ELL_eis_een_referendum
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_moedig_bijeenkomsten_aan
+		}
+		x = 64
+		y = 6
+
+	}
+	focus = {
+		id = ELL_onze_nieuwe_regering
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_rode_maand
+			focus = ELL_eis_een_referendum
+		}
+		x = 62
+		y = 7
+
+	}
+	focus = {
+		id = ELL_de_arbeiders_staan_centraal
+		icon = GFX_goal_generic_construction
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_onze_nieuwe_regering
+		}
+		mutually_exclusive = {
+			focus = ELL_het_leger_staat_centraal
+		}
+		x = 63
+		y = 8
+
+	}
+	focus = {
+		id = ELL_het_leger_staat_centraal
+		icon = GFX_focus_generic_combined_arms
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_onze_nieuwe_regering
+		}
+		mutually_exclusive = {
+			focus = ELL_de_arbeiders_staan_centraal
+		}
+		x = 66
+		y = 8
+
+	}
+	focus = {
+		id = ELL_de_eerste_rode_parade
+		icon = GFX_focus_generic_little_entente
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_het_leger_staat_centraal
+		}
+		x = 66
+		y = 9
+
+	}
+	focus = {
+		id = ELL_rode_officieren
+		icon = GFX_focus_generic_military_mission
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_eerste_rode_parade
+		}
+		x = 66
+		y = 10
+
+	}
+	focus = {
+		id = ELL_versterk_de_positie_van_de_VDPE
+		icon = GFX_goal_support_democracy
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_hervorm_de_politiek
+		}
+		mutually_exclusive = {
+			focus = ELL_sta_de_CEAP_weer_toe
+			focus = ELL_geef_de_NSE_meer_kracht_in_de_regering
+			focus = ELL_een_nieuw_geloof_in_de_MGP
+		}
+		x = 71
+		y = 2
+
+	}
+	focus = {
+		id = ELL_de_status_quo
+		icon = GFX_focus_generic_treaty
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_versterk_de_positie_van_de_VDPE
+		}
+		mutually_exclusive = {
+			focus = ELL_commerciele_wapen_fabrieken
+		}
+		x = 69
+		y = 3
+
+	}
+	focus = {
+		id = ELL_vredes_economie
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_status_quo
+		}
+		x = 69
+		y = 4
+
+	}
+	focus = {
+		id = ELL_verzoeningspolitiek
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_vredes_economie
+		}
+		x = 67
+		y = 5
+
+	}
+	focus = {
+		id = ELL_focus_op_de_handel
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_vredes_economie
+		}
+		x = 69
+		y = 5
+
+	}
+	focus = {
+		id = ELL_mobiliseer_de_reserves
+		icon = GFX_goal_generic_political_pressure
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_verzoeningspolitiek
+		}
+		prerequisite = {
+			focus = ELL_focus_op_de_handel
+		}
+		x = 68
+		y = 6
+
+	}
+	focus = {
+		id = ELL_geef_werk_aan_de_mens
+		icon = GFX_goal_generic_production
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_focus_op_de_handel
+		}
+		x = 71
+		y = 6
+
+	}
+	focus = {
+		id = ELL_focus_op_de_industrialisatie
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_mobiliseer_de_reserves
+		}
+		prerequisite = {
+			focus = ELL_geef_werk_aan_de_mens
+		}
+		x = 69
+		y = 7
+
+	}
+	focus = {
+		id = ELL_neutraliteit
+		icon = GFX_goal_generic_defence
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_focus_op_de_industrialisatie
+		}
+		x = 69
+		y = 8
+
+	}
+	focus = {
+		id = ELL_interne_ontwikkelingen
+		icon = GFX_goal_generic_construct_civilian
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_neutraliteit
+		}
+		x = 69
+		y = 9
+
+	}
+	focus = {
+		id = ELL_vrijwilligers_wet
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_focus_op_de_industrialisatie
+		}
+		x = 71
+		y = 8
+
+	}
+	focus = {
+		id = ELL_buitelandse_werkers
+		icon = GFX_goal_generic_construction
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_vrijwilligers_wet
+		}
+		x = 71
+		y = 9
+
+	}
+	focus = {
+		id = ELL_welvaart_in_de_technologie
+		icon = GFX_focus_research2
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_interne_ontwikkelingen
+		}
+		prerequisite = {
+			focus = ELL_buitelandse_werkers
+		}
+		x = 70
+		y = 10
+
+	}
+	focus = {
+		id = ELL_commerciele_wapen_fabrieken
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_versterk_de_positie_van_de_VDPE
+		}
+		mutually_exclusive = {
+			focus = ELL_de_status_quo
+		}
+		x = 73
+		y = 3
+
+	}
+	focus = {
+		id = ELL_een_bericht_aan_engeland
+		icon = GFX_focus_chi_british_cooperation
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_commerciele_wapen_fabrieken
+		}
+		mutually_exclusive = {
+			focus = ELL_de_midden_oosten_confederatie
+		}
+		x = 73
+		y = 4
+
+	}
+	focus = {
+		id = ELL_wetenschappers_van_over_heel_de_wereld
+		icon = GFX_goal_tfv_generic_tech_sharing
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_een_bericht_aan_engeland
+		}
+		x = 72
+		y = 5
+
+	}
+	focus = {
+		id = ELL_wapen_perfectie
+		icon = GFX_goal_generic_small_arms
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_een_bericht_aan_engeland
+		}
+		x = 74
+		y = 5
+
+	}
+	focus = {
+		id = ELL_moedig_gelijkheid_aan
+		icon = GFX_focus_generic_self_management
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_wetenschappers_van_over_heel_de_wereld
+		}
+		prerequisite = {
+			focus = ELL_wapen_perfectie
+		}
+		x = 73
+		y = 6
+
+	}
+	focus = {
+		id = ELL_anti_fascisme
+		icon = GFX_goal_generic_military_sphere
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_moedig_gelijkheid_aan
+		}
+		x = 73
+		y = 7
+
+	}
+	focus = {
+		id = ELL_de_midden_oosten_confederatie
+		icon = GFX_goal_anschluss
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_commerciele_wapen_fabrieken
+		}
+		mutually_exclusive = {
+			focus = ELL_een_bericht_aan_engeland
+		}
+		x = 79
+		y = 4
+
+	}
+	focus = {
+		id = ELL_verspreid_democratie_met_de_diplomatiek
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_midden_oosten_confederatie
+		}
+		mutually_exclusive = {
+			focus = ELL_i_love_democracy
+		}
+		x = 77
+		y = 5
+
+	}
+	focus = {
+		id = ELL_bouw_meer_fabrieken
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_verspreid_democratie_met_de_diplomatiek
+		}
+		x = 76
+		y = 6
+
+	}
+	focus = {
+		id = ELL_i_love_democracy
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_midden_oosten_confederatie
+		}
+		mutually_exclusive = {
+			focus = ELL_verspreid_democratie_met_de_diplomatiek
+		}
+		x = 80
+		y = 5
+
+	}
+	focus = {
+		id = ELL_bereid_de_mensen_voor_op_oorlog
+		icon = GFX_goal_generic_major_war
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_i_love_democracy
+		}
+		x = 80
+		y = 6
+
+	}
+	focus = {
+		id = ELL_democratie_in_ollandia
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_bereid_de_mensen_voor_op_oorlog
+		}
+		x = 79
+		y = 7
+
+	}
+	focus = {
+		id = ELL_democratie_in_turkije
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_democratie_in_ollandia
+		}
+		x = 79
+		y = 8
+
+	}
+	focus = {
+		id = ELL_democratie_in_iran
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_bereid_de_mensen_voor_op_oorlog
+		}
+		x = 81
+		y = 7
+
+	}
+	focus = {
+		id = ELL_democratie_in_afghanistan
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_democratie_in_iran
+		}
+		x = 81
+		y = 8
+
+	}
+	focus = {
+		id = ELL_democratie_in_thiccland
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_democratie_in_turkije
+		}
+		prerequisite = {
+			focus = ELL_democratie_in_afghanistan
+		}
+		x = 80
+		y = 9
+
+	}
+	focus = {
+		id = ELL_een_nieuw_geloof_in_de_MGP
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_hervorm_de_politiek
+		}
+		mutually_exclusive = {
+			focus = ELL_versterk_de_positie_van_de_VDPE
+			focus = ELL_sta_de_CEAP_weer_toe
+			focus = ELL_geef_de_NSE_meer_kracht_in_de_regering
+		}
+
+		completion_reward = { 
+		 }
+
+		x = 85
+		y = 2
+
+	}
+	focus = {
+		id = ELL_oude_tradities
+		icon = GFX_focus_generic_home_defense
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_een_nieuw_geloof_in_de_MGP
+		}
+		x = 84
+		y = 3
+
+	}
+	focus = {
+		id = ELL_overtuig_de_jeugd
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_een_nieuw_geloof_in_de_MGP
+		}
+		x = 86
+		y = 3
+
+	}
+	focus = {
+		id = ELL_verspreid_flyers
+		icon = GFX_focus_generic_concessions
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_oude_tradities
+		}
+		prerequisite = {
+			focus = ELL_overtuig_de_jeugd
+		}
+		x = 85
+		y = 4
+
+	}
+	focus = {
+		id = ELL_de_bestorming_van_het_parlement
+		icon = GFX_goal_generic_attack_allies
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_verspreid_flyers
+		}
+		x = 85
+		y = 5
+
+	}
+	focus = {
+		id = ELL_beveilig_de_nieuwe_staat
+		icon = GFX_goal_generic_radar
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_bestorming_van_het_parlement
+		}
+		x = 84
+		y = 6
+
+	}
+	focus = {
+		id = ELL_verban_het_communisme
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_bestorming_van_het_parlement
+		}
+		x = 86
+		y = 6
+
+	}
+	focus = {
+		id = ELL_de_alleen_heerser
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_beveilig_de_nieuwe_staat
+		}
+		prerequisite = {
+			focus = ELL_verban_het_communisme
+		}
+		x = 85
+		y = 7
+
+	}
+	focus = {
+		id = ELL_een_leger_met_een_koning
+		icon = GFX_focus_generic_military_academy
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_alleen_heerser
+		}
+		x = 83
+		y = 8
+
+	}
+	focus = {
+		id = ELL_patriottisme
+		icon = GFX_goal_generic_small_arms
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_alleen_heerser
+		}
+		x = 85
+		y = 8
+
+	}
+	focus = {
+		id = ELL_anti_pacifisme
+		icon = GFX_goal_generic_military_deal
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_alleen_heerser
+		}
+		x = 87
+		y = 8
+
+	}
+	focus = {
+		id = ELL_onze_idealen
+		icon = GFX_goal_rhineland
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_een_leger_met_een_koning
+		}
+		prerequisite = {
+			focus = ELL_patriottisme
+		}
+		prerequisite = {
+			focus = ELL_anti_pacifisme
+		}
+		x = 85
+		y = 9
+
+	}
+	focus = {
+		id = ELL_nieuwe_tactieken
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_onze_idealen
+		}
+		x = 84
+		y = 10
+
+	}
+	focus = {
+		id = ELL_overtuig_de_mensen_voor_oorlog
+		icon = GFX_goal_generic_political_pressure
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_nieuwe_tactieken
+		}
+		x = 85
+		y = 11
+
+	}
+	focus = {
+		id = ELL_meer_macht_naar_de_koning
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_overtuig_de_mensen_voor_oorlog
+		}
+		x = 85
+		y = 12
+
+	}
+	focus = {
+		id = ELL_duits_synthetisch_rubber
+		icon = GFX_focus_chi_mission_to_germany
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_synthetische_industrie
+		}
+		prerequisite = {
+			focus = ELL_een_deal_met_timo
+		}
+		mutually_exclusive = {
+			focus = ELL_engels_koloniaal_rubber
+		}
+
+		completion_reward = {
+			GER = {
+				add_opinion_modifier = { target = ELL modifier = ger_ita_alliance_focus }
+			}
+		add_popularity = { ideology = fascism popularity = 0.03 }
+		    add_resource = {
+				type = rubber
+				amount = 6
+				state = 231
+			}
+		}
+
+		x = 4
+		y = 5
+
+	}
+	focus = {
+		id = ELL_de_mineralen
+		icon = GFX_goal_generic_trade
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_autarkie
+			focus = ELL_engels_koloniaal_rubber
+			focus = ELL_duits_synthetisch_rubber
+		}
+
+		completion_reward = {
+			add_resource = {
+				type = chromium
+				amount = 10
+				state = 229
+			}
+			add_resource = {
+				type = aluminium
+				amount = 10
+				state = 223
+			}
+		}
+
+		x = 5
+		y = 6
+
+	}
+	focus = {
+		id = ELL_onze_vernieuwde_industrie
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_mineralen
+			focus = ELL_technologische_vooruitgangen
+			focus = ELL_militairistische_technologische_verbeteringen
+		}
+
+		completion_reward = {
+		add_ideas = ELL_onze_nieuwe_economie
+		remove_ideas = ELL_economische_crisis2
+		}
+
+		x = 17
+		y = 7
+
+	}
+	focus = {
+		id = ELL_het_tijdperk_van_nieuwe_technologieen
+		icon = GFX_focus_research2
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_onze_vernieuwde_industrie
+		}
+
+		completion_reward = {
+		add_research_slot = 1
+		}
+
+		x = 17
+		y = 8
+
+	}
+	focus = {
+		id = ELL_vernieuwde_trainingen
+		icon = GFX_focus_generic_military_academy
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_een_wapen_in_elke_hand
+		}
+
+		completion_reward = {
+		add_ideas = { ELL_vernieuwde_trainingen }
+		}
+
+		x = 26
+		y = 6
+
+	}
+	focus = {
+		id = ELL_het_vernieuwde_leger
+		icon = GFX_focus_chi_army_reform
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_vernieuwde_trainingen
+			focus = ELL_olie_reserves
+		}
+		prerequisite = {
+			focus = ELL_zware_jachtvliegtuigen
+		}
+		prerequisite = {
+			focus = ELL_grond_support
+		}
+		prerequisite = {
+			focus = ELL_nieuwe_havens
+		}
+
+		completion_reward = {
+			add_ideas = { ELL_het_vernieuwde_leger }
+		}
+
+		x = 34
+		y = 7
+
+	}
+	focus = {
+		id = ELL_de_zuiderlijke_push
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_nodig_duitse_wetenschappers_uit
+		}
+
+		completion_reward = {
+		add_war_support = 0.05
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}
+		}
+
+		x = 55
+		y = 13
+
+	}
+	focus = {
+		id = ELL_duits_getraind_leger
+		icon = GFX_goal_generic_wolf_pack
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_nodig_duitse_wetenschappers_uit
+		}
+
+		completion_reward = {
+			add_ideas = { ELL_duits_getraind_leger }
+		}
+
+		x = 53
+		y = 13
+
+	}
+	focus = {
+		id = ELL_duitse_designs
+		icon = GFX_focus_generic_license_production
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_duits_getraind_leger
+		}
+		prerequisite = {
+			focus = ELL_de_zuiderlijke_push
+		}
+		x = 54
+		y = 14
+
+	}
+	focus = {
+		id = ELL_etc1
+		icon = GFX_goal_generic_attack_allies
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_eis_tehran
+		}
+
+		completion_reward = {
+		ELL = { country_event = { id = ell.2 } }
+		}
+
+		x = 58
+		y = 15
+
+	}
+	focus = {
+		id = ELL_split_turkije
+		icon = GFX_goal_generic_attack_allies
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_etc1
+		}
+		prerequisite = {
+			focus = ELL_etc3
+		}
+
+		completion_reward = {
+			ELL = { country_event = { id = ell.8} }
+		}
+		x = 59
+		y = 16
+
+	}
+	focus = {
+		id = ELL_intergratie_proces
+		icon = GFX_goal_demand_sudetenland
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_split_turkije
+		}
+		x = 59
+		y = 17
+
+	}
+	focus = {
+		id = ELL_moedig_immigratie_naar_nieuwe_landen_aan
+		icon = GFX_focus_generic_concessions
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_intergratie_proces
+		}
+		x = 59
+		y = 18
+
+	}
+	focus = {
+		id = ELL_verkonding_groter_elton
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_moedig_immigratie_naar_nieuwe_landen_aan
+		}
+		x = 58
+		y = 19
+
+	}
+	focus = {
+		id = ELL_het_kaukasus_rijk
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_moedig_immigratie_naar_nieuwe_landen_aan
+		}
+		x = 60
+		y = 19
+
+	}
+	focus = {
+		id = ELL_de_elite_wetenschappers
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_verkonding_groter_elton
+		}
+		prerequisite = {
+			focus = ELL_het_kaukasus_rijk
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+		x = 59
+		y = 20
+
+	}
+	focus = {
+		id = ELL_groenlicht_voor_schieten
+		icon = GFX_focus_ger_strike_at_the_source
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_grens_garnizoenen
+		}
+
+		available = {
+			has_completed_focus = ELL_strengere_grenscontrole
+		}
+
+		completion_reward = {
+				swap_ideas = {
+				remove_idea = ELL_immigratie2
+				add_idea = ELL_immigratie3
+			}
+		}
+
+		x = 50
+		y = 10
+
+	}
+	focus = {
+		id = ELL_verhoog_de_financieering_van_grens_hekken
+		icon = GFX_focus_generic_industry_2
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_strengere_grenscontrole
+		}
+
+		available = {
+			has_completed_focus = ELL_groenlicht_voor_schieten
+		}
+
+		completion_reward = {
+				swap_ideas = {
+				remove_idea = ELL_immigratie3
+				add_idea = ELL_immigratie4
+			}
+		}
+
+		x = 52
+		y = 10
+
+	}
+	focus = {
+		id = ELL_een_einde_aan_de_immigratie_problemen
+		icon = GFX_focus_rom_parties_end
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_groenlicht_voor_schieten
+		}
+		prerequisite = {
+			focus = ELL_verhoog_de_financieering_van_grens_hekken
+		}
+
+		completion_reward = {
+				swap_ideas = {
+				remove_idea = ELL_immigratie4
+				add_idea = ELL_immigratie5
+			}
+		}
+
+		x = 51
+		y = 11
+
+	}
+	focus = {
+		id = ELL_verbeter_de_kwaliteit_van_werken
+		icon = GFX_goal_generic_production2
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_arbeiders_staan_centraal
+		}
+		x = 63
+		y = 9
+
+	}
+	focus = {
+		id = ELL_moedig_werken_aan
+		icon = GFX_goal_generic_propaganda
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_verbeter_de_kwaliteit_van_werken
+		}
+		x = 63
+		y = 10
+
+	}
+	focus = {
+		id = ELL_kijk_uitwaarts
+		icon = GFX_goal_generic_demand_territory
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_moedig_werken_aan
+			focus = ELL_rode_officieren
+		}
+		x = 66
+		y = 11
+
+	}
+	focus = {
+		id = ELL_het_arbeiders_congress
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_kijk_uitwaarts
+		}
+		mutually_exclusive = {
+			focus = ELL_een_missie_naar_moskau
+		}
+		x = 64
+		y = 12
+
+	}
+	focus = {
+		id = ELL_een_missie_naar_moskau
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_kijk_uitwaarts
+		}
+		mutually_exclusive = {
+			focus = ELL_het_arbeiders_congress
+		}
+		x = 68
+		y = 12
+
+	}
+	focus = {
+		id = ELL_rode_wetenschappers
+		icon = GFX_focus_generic_socialist_science
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_het_arbeiders_congress
+		}
+		x = 65
+		y = 13
+
+	}
+	focus = {
+		id = ELL_verspreid_communisme_in_het_middenoosten
+		icon = GFX_goal_support_fourth_int
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_het_arbeiders_congress
+		}
+		x = 63
+		y = 13
+
+	}
+	focus = {
+		id = ELL_breng_de_revolutie_voort
+		icon = GFX_goal_generic_war_with_comintern
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_verspreid_communisme_in_het_middenoosten
+		}
+		prerequisite = {
+			focus = ELL_rode_wetenschappers
+		}
+		x = 64
+		y = 14
+
+	}
+	focus = {
+		id = ELL_socialistische_economie
+		icon = GFX_focus_generic_industry_3
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_breng_de_revolutie_voort
+		}
+		x = 65
+		y = 15
+
+	}
+	focus = {
+		id = ELL_werk_voor_iedereen
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_breng_de_revolutie_voort
+		}
+		x = 63
+		y = 15
+
+	}
+	focus = {
+		id = ELL_nationalisering_van_de_olie
+		icon = GFX_goal_generic_alliance
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_werk_voor_iedereen
+		}
+		prerequisite = {
+			focus = ELL_socialistische_economie
+		}
+		x = 64
+		y = 16
+
+	}
+	focus = {
+		id = ELL_communistische_utopia
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_nationalisering_van_de_olie
+		}
+		x = 64
+		y = 17
+
+	}
+	focus = {
+		id = ELL_erken_de_sovjet_unie
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_een_missie_naar_moskau
+		}
+		x = 67
+		y = 13
+
+	}
+	focus = {
+		id = ELL_russische_wapen_designs
+		icon = GFX_goal_generic_production
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_een_missie_naar_moskau
+		}
+		x = 69
+		y = 13
+
+	}
+	focus = {
+		id = ELL_sluit_je_aan_bij_de_comintern
+		icon = GFX_goal_generic_military_deal
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_erken_de_sovjet_unie
+		}
+		prerequisite = {
+			focus = ELL_russische_wapen_designs
+		}
+		x = 68
+		y = 14
+
+	}
+	focus = {
+		id = ELL_russische_wetenschappers
+		icon = GFX_focus_generic_socialist_science
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_sluit_je_aan_bij_de_comintern
+		}
+		x = 69
+		y = 15
+
+	}
+	focus = {
+		id = ELL_de_oliebron_voor_de_russen
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_russische_wetenschappers
+		}
+		x = 67
+		y = 16
+
+	}
+	focus = {
+		id = ELL_leer_van_russische_tactieken
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_russische_wetenschappers
+		}
+		x = 69
+		y = 16
+
+	}
+	focus = {
+		id = ELL_voortzetting_van_de_revolutie
+		icon = GFX_goal_support_fourth_int
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_de_oliebron_voor_de_russen
+		}
+		prerequisite = {
+			focus = ELL_leer_van_russische_tactieken
+		}
+		prerequisite = {
+			focus = ELL_gulags
+		}
+		x = 69
+		y = 17
+
+	}
+	focus = {
+		id = ELL_communistische_place_to_be
+		icon = GFX_focus_ger_great_red_menace
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_communistische_utopia
+			focus = ELL_voortzetting_van_de_revolutie
+		}
+		x = 66
+		y = 18
+
+	}
+	focus = {
+		id = ELL_gulags
+		icon = GFX_goal_anti_comintern_pact
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_russische_wetenschappers
+		}
+		x = 71
+		y = 16
+
+	}
+	focus = {
+		id = ELL_een_nieuwe_universiteit
+		icon = GFX_focus_research
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_bouw_meer_fabrieken
+		}
+		x = 76
+		y = 7
+
+	}
+	focus = {
+		id = ELL_innerlijke_perfectie
+		icon = GFX_goal_generic_production2
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_anti_fascisme
+			focus = ELL_een_nieuwe_universiteit
+		}
+		x = 74
+		y = 9
+
+	}
+	focus = {
+		id = ELL_het_migratie_probleem
+		icon = GFX_goal_generic_cavalry
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_innerlijke_perfectie
+			focus = ELL_democratie_in_thiccland
+		}
+		x = 77
+		y = 10
+
+	}
+	focus = {
+		id = ELL_het_jaren_oude_probleem
+		icon = GFX_goal_generic_defence
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_rode_officieren
+		}
+		prerequisite = {
+			focus = ELL_moedig_werken_aan
+		}
+		x = 72
+		y = 11
+
+	}
+	focus = {
+		id = ELL_probeer_te_onderhandelen_met_rusland
+		icon = GFX_goal_generic_dangerous_deal
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_het_jaren_oude_probleem
+		}
+		x = 71
+		y = 12
+
+	}
+	focus = {
+		id = ELL_grens_regulatie1
+		icon = GFX_focus_generic_provoke_border_clashes
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_probeer_te_onderhandelen_met_rusland
+		}
+		x = 71
+		y = 13
+
+	}
+	focus = {
+		id = ELL_verdere_diplomatie_met_de_russen
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_het_jaren_oude_probleem
+		}
+		x = 73
+		y = 12
+
+	}
+	focus = {
+		id = ELL_betere_leefsomstandigheden_voor_de_migranten
+		icon = GFX_focus_generic_self_management
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_verdere_diplomatie_met_de_russen
+		}
+		x = 73
+		y = 13
+
+	}
+	focus = {
+		id = ELL_een_deal_met_rusland
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_grens_regulatie1
+		}
+		prerequisite = {
+			focus = ELL_betere_leefsomstandigheden_voor_de_migranten
+		}
+		x = 72
+		y = 14
+
+	}
+	focus = {
+		id = ELL_onderhandelingen_met_rusland
+		icon = GFX_goal_generic_improve_relations
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_het_migratie_probleem
+		}
+		x = 76
+		y = 11
+
+	}
+	focus = {
+		id = ELL_laat_een_klein_deel_binnen
+		icon = GFX_goal_generic_national_unity
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_het_migratie_probleem
+		}
+		x = 78
+		y = 11
+
+	}
+	focus = {
+		id = ELL_grens_regulatie3
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_onderhandelingen_met_rusland
+		}
+		x = 76
+		y = 12
+
+	}
+	focus = {
+		id = ELL_anti_immigratie_propaganda
+		icon = GFX_goal_generic_propaganda
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_laat_een_klein_deel_binnen
+		}
+		x = 78
+		y = 12
+
+	}
+	focus = {
+		id = ELL_een_compromis
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_grens_regulatie3
+		}
+		prerequisite = {
+			focus = ELL_anti_immigratie_propaganda
+		}
+		x = 77
+		y = 13
+
+	}
+	focus = {
+		id = ELL_een_bezoek_aan_wilhelm_II
+		icon = GFX_focus_ger_revive_kaiserreich
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_nieuwe_tactieken
+		}
+		x = 83
+		y = 11
+
+	}
+	focus = {
+		id = ELL_haal_hem_uit_holland
+		icon = GFX_focus_ger_return_of_the_kaiser
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_een_bezoek_aan_wilhelm_II
+		}
+		x = 83
+		y = 12
+
+	}
+	focus = {
+		id = ELL_onze_landen
+		icon = GFX_focus_rom_handle_king
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_haal_hem_uit_holland
+		}
+		prerequisite = {
+			focus = ELL_meer_macht_naar_de_koning
+		}
+		x = 81
+		y = 13
+
+	}
+	focus = {
+		id = ELL_intergreer_onze_nieuwe_landen
+		icon = GFX_goal_molotov_ribbentrop_pact
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_onze_landen
+		}
+		x = 81
+		y = 14
+
+	}
+	focus = {
+		id = ELL_konings_werk
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_meer_macht_naar_de_koning
+		}
+		prerequisite = {
+			focus = ELL_haal_hem_uit_holland
+		}
+		x = 83
+		y = 13
+
+	}
+	focus = {
+		id = ELL_immigratie_nooit_van_gehoord
+		icon = GFX_goal_generic_secret_weapon
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_konings_werk
+		}
+		x = 83
+		y = 14
+
+	}
+	focus = {
+		id = ELL_lang_leve_de_koning
+		icon = GFX_focus_hun_elect_a_king
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_immigratie_nooit_van_gehoord
+		}
+		prerequisite = {
+			focus = ELL_intergreer_onze_nieuwe_landen
+		}
+		x = 82
+		y = 15
+
+	}
+	focus = {
+		id = ELL_de_monarchie_van_de_kaukasus
+		icon = GFX_focus_chi_army_reform
+		cost = 10,00
+		prerequisite = {
+			focus = ELL_lang_leve_de_koning
+		}
+		x = 82
+		y = 16
+
+	}
+}

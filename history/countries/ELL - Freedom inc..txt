@@ -1,0 +1,179 @@
+﻿capital = 231
+
+oob = "ELL_1936"
+
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+	basic_light_tank = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	tactical_bomber1 = 1
+	strategic_bomber1 = 1
+	transport = 1
+	formation_flying = 1
+	early_submarine = 1
+	early_destroyer = 1
+	basic_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+}
+
+add_ideas = {
+    immigratie
+    ELL_economische_crisis
+}
+
+set_research_slots = 3
+set_convoys = 200
+set_stability = 0.6
+set_war_support = 0.3
+
+set_politics = {
+
+	parties = {
+		democratic = { 
+			popularity = 78
+		}
+
+		fascism = {
+			popularity = 6
+		}
+		
+		communism = {
+			popularity = 8
+		}
+		
+		neutrality = { 
+			popularity = 8
+		}
+	}
+	
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Elliot Baudeweyns"
+	desc = ""
+	picture = "ELL_democratic.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ellinin Baudislav"
+	desc = ""
+	picture = "ELL_communism.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Sir Elton The 2nd"
+	desc = ""
+	picture = "ELL_neutrality.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Elbert Von Bauder"
+	desc = ""
+	picture = "ELL_communism.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		#
+	}
+}
+
+
+create_corps_commander = {
+	name = "General Kenobi"
+	portrait_path = "gfx/leaders/ELL/ELL_general.dds"
+	traits = { trait_mountaineer }
+	skill = 6
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "General Stukov"
+	portrait_path = "gfx/leaders/ELL/ELL_stukov.dds"
+	traits = { trickster trait_cautious }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "General Kane"
+	portrait_path = "gfx/leaders/ELL/ELL_nod.dds"
+	traits = { trickster trait_engineer panzer_leader war_hero }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 1
+	planning_skill = 5
+	logistics_skill = 5
+}
+
+create_corps_commander = {
+	name = "General Valarian"
+	portrait_path = "gfx/leaders/ELL/ELL_valarian.dds"
+	traits = { trickster fortress_buster }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 1
+	planning_skill = 5
+	logistics_skill = 5
+}
+
+create_field_marshal = {
+	name = "Marshal Acturus"
+	portrait_path = "gfx/leaders/ELL/ELL_acturus.dds"
+	traits = { fast_planner inspirational_leader }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 1
+	planning_skill = 5
+	logistics_skill = 5
+}
+
+create_navy_leader = {
+	name = "Admiraal Swann"
+    portrait_path = "gfx/leaders/ELL/ELL_admiraalidk.dds"
+	traits = { ironside }
+	skill = 5
+}
+
+create_navy_leader = {
+	name = "Admiraal Matt"
+	portrait_path = "gfx/leaders/ELL/ELL_admiraalmatt.dds"
+	traits = { superior_tactician }
+	skill = 5
+}

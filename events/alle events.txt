@@ -1,0 +1,1665 @@
+﻿#####################TEHRAN ELL######################
+
+
+
+add_namespace = ell
+
+country_event = {
+     id = ell.0
+	 title = ell.0.t
+	 desc = ell.0.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = no #yes/no
+	 
+	 trigger = { 
+		 tag = ELL
+	 }
+	 
+	 
+	 
+	 option = {
+	     name = ell.0.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 PER = { country_event = { id = per.1 days = 1 } }
+	 }
+}
+
+add_namespace = per
+
+country_event = {
+     id = per.1
+	 title = per.1.t
+	 desc = per.1.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = PER
+	 }
+	  
+	 option = {
+	     name = per.1.a
+		 trigger = {
+		 tag = PER
+		 }
+		 ELL = { country_event = { id = ell.1 days = 1 } }
+	 }
+}
+
+country_event = {
+     id = ell.1
+	 title = ell.1.t
+	 desc = ell.1.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = ELL
+	 }
+	  
+	 option = {
+	     name = ell.1.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 transfer_state = 266
+	 }
+}
+
+
+###############HAMADAN ELL######################
+
+
+
+
+
+country_event = {
+     id = ell.2
+	 title = ell.2.t
+	 desc = ell.2.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = ELL
+	 }
+	  
+	 option = {
+	     name = ell.2.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 PER = { country_event = { id = per.2 days = 1 } }
+	 }
+}
+
+country_event = {
+     id = per.2
+	 title = per.2.t
+	 desc = per.2.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = PER
+	 }
+	  
+	 option = {
+	     name = per.2.a
+		 trigger = {
+		 tag = PER
+		 }
+		 ELL = { country_event = { id = ell.3 days = 1 } }
+	 }
+}
+
+country_event = {
+     id = ell.3
+	 title = ell.3.t
+	 desc = ell.3.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = ELL
+	 }
+	  
+	 option = {
+	     name = ell.3.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 transfer_state = 417
+	 }
+}
+
+
+
+#######################KRASNODAR ELL###################################
+
+
+
+country_event = {
+     id = ell.4
+	 title = ell.4.t
+	 desc = ell.4.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = ELL
+	 }
+	  
+	 option = {
+	     name = ell.4.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 SOV = { country_event = { id = soviet.64 days = 1 } }
+	 }
+}
+
+
+#SOVIET STUK VAN CODE IN SOVIET UNION EVENTS
+
+
+country_event = {
+     id = ell.5
+	 title = ell.5.t
+	 desc = ell.5.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = ELL
+	 }
+	  
+	 option = {
+	     name = ell.5.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 transfer_state = 234
+	 }
+}
+
+
+
+#############################CRIMEA ELL#########################################
+
+
+country_event = {
+     id = ell.6
+	 title = ell.6.t
+	 desc = ell.6.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = ELL
+	 }
+	  
+	 option = {
+	     name = ell.6.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 SOV = { country_event = { id = soviet.65 days = 1 } }
+	 }
+}
+
+
+#SOVIET STUK VAN CODE IN SOVIET UNION EVENTS
+
+
+country_event = {
+     id = ell.7
+	 title = ell.7.t
+	 desc = ell.7.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = ELL
+	 }
+	  
+	 option = {
+	     name = ell.7.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 transfer_state = 137
+	 }
+}
+
+
+###################SPLIT TURKIJE TIMO EN ELL#######################
+
+
+country_event = {
+     id = ell.8
+	 title = ell.8.t
+	 desc = ell.8.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = ELL
+		 has_completed_focus = {
+		 	ELL_split_turkije
+		 }
+	 }
+	  
+	 option = {
+	     name = ell.8.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 BIM = { country_event = { id = bim.0 days = 1 } }
+	 }
+}
+
+add_namespace = bim
+
+country_event = {
+     id = bim.0
+	 title = bim.0.t
+	 desc = bim.0.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = BIM
+	 }
+	  
+	 option = {
+	     name = bim.0.a
+		ai_chance = { 
+			factor = 75
+		}
+		 trigger = {
+		 tag = BIM
+		 }
+		 ELL = { country_event = { id = ell.9 days = 1 } }
+	 }
+	 option = {
+	     name = bim.0.b
+		 ai_chance = { 
+			factor = 25
+		}
+		 trigger = {
+		 tag = BIM
+		 }
+		 BIM = { country_event = { id = ell.10 days = 1 } }
+	 }
+}
+
+country_event = {
+     id = ell.9
+	 title = ell.9.t
+	 desc = ell.9.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = ELL
+	 }
+	  
+	 option = {
+	     name = ell.9.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 TUR = { country_event = { id = turkey.2 days = 1 } }
+	 }
+}
+
+country_event = {
+     id = ell.10
+	 title = ell.10.t
+	 desc = ell.10.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = ELL
+	 }
+	  
+	 option = {
+	     name = ell.10.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 create_wargoal = {
+			type = annex_everything
+			target = BIM
+		}
+	 }
+	 option = {
+	     name = ell.10.b
+		 trigger = {
+		 tag = ELL
+		 }
+		 add_political_power = 5
+	 }
+}
+
+country_event = {
+     id = ell.11
+	 title = ell.11.t
+	 desc = ell.11.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = ELL
+	 }
+	  
+	 option = {
+	     name = ell.11.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 transfer_state = 355
+		 transfer_state = 349
+		 transfer_state = 350
+		 transfer_state = 344
+		 transfer_state = 348
+		 transfer_state = 356
+	 }
+}
+
+country_event = {
+     id = bim.2
+	 title = bim.2.t
+	 desc = bim.2.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = BIM
+	 }
+	  
+	 option = {
+	     name = bim.2.a
+		 trigger = {
+		 tag = BIM
+		 }
+		 transfer_state = 343
+		 transfer_state = 347
+		 transfer_state = 49
+		 transfer_state = 346
+		 transfer_state = 345
+	 }
+}
+
+
+#######################ALBANIE TIMO############################
+
+
+country_event = {
+     id = bim.3
+	 title = bim.3.t
+	 desc = bim.3.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = BIM
+	 }
+	  
+	 option = {
+	     name = bim.3.a
+		 trigger = {
+		 tag = BIM
+		 }
+		 ALB = { country_event = { id = alb.0 days = 1 } }
+	 }
+}
+
+
+add_namespace = alb
+
+country_event = {
+     id = alb.0
+	 title = alb.0.t
+	 desc = alb.0.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = ALB
+	 }
+	  
+	 option = {
+	     name = alb.0.a
+		 trigger = {
+		 tag = ALB
+		 }
+		 BIM = { country_event = { id = bim.4 days = 1 } }
+	 }
+}
+
+country_event = {
+     id = bim.4
+	 title = bim.4.t
+	 desc = bim.4.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = BIM
+	 }
+	  
+	 option = {
+	     name = bim.4.a
+		 trigger = {
+		 tag = BIM
+		 }
+		transfer_state = 44
+	 }
+}
+
+
+###################BULGARIJE TIMO#############################
+
+country_event = {
+     id = bim.5
+	 title = bim.5.t
+	 desc = bim.5.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = BIM
+	 }
+	  
+	 option = {
+	     name = bim.5.a
+		 trigger = {
+		 tag = BIM
+		 }
+		BUL = { country_event = { id = bulgaria.6 days = 1 } }
+	 }
+}
+
+
+country_event = {
+     id = bim.6
+	 title = bim.6.t
+	 desc = bim.6.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = BIM
+	 }
+	  
+	 option = {
+	     name = bim.6.a
+		 trigger = {
+		 tag = BIM
+		 }
+		transfer_state = 48
+		transfer_state = 212
+		transfer_state = 211
+	 }
+}
+
+
+######################MACEDONIE TIMO########################
+
+country_event = {
+     id = bim.7
+	 title = bim.7.t
+	 desc = bim.7.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = BIM
+	 }
+	  
+	 option = {
+	     name = bim.7.a
+		 trigger = {
+		 tag = BIM
+		 }
+		YUG = { country_event = { id = yugoslavia.10 days = 1 } }
+	 }
+}
+
+country_event = {
+     id = bim.8
+	 title = bim.8.t
+	 desc = bim.8.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = BIM
+	 }
+	  
+	 option = {
+	     name = bim.8.a
+		 trigger = {
+		 tag = BIM
+		 }
+		transfer_state = 106
+	 }
+}
+
+####################CYPRUS TIMO#############################
+
+country_event = {
+     id = bim.9
+	 title = bim.9.t
+	 desc = bim.9.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = BIM
+	 }
+	  
+	 option = {
+	     name = bim.9.a
+		 trigger = {
+		 tag = BIM
+		 }
+		ENG = { country_event = { id = britain.25 days = 1} }
+	 }
+}
+
+
+country_event = {
+     id = bim.10
+	 title = bim.10.t
+	 desc = bim.10.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = BIM
+	 }
+	  
+	 option = {
+	     name = bim.10.a
+		 trigger = {
+		 tag = BIM
+		 }
+		transfer_state = 183
+	 }
+}
+
+
+
+##############################TIMO EN EL TURKIJE 2#################################
+
+
+country_event = {
+     id = bim.11
+	 title = bim.11.t
+	 desc = bim.11.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = BIM
+	 }
+	  
+	 option = {
+	     name = bim.11.a
+		 trigger = {
+		 tag = BIM
+		 }
+		 ELL = { country_event = { id = ell.12 days = 1 } }
+	 }
+}
+
+country_event = {
+     id = ell.12
+	 title = ell.12.t
+	 desc = ell.12.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = ELL
+	 }
+	  
+	 option = {
+	     name = ell.12.a
+		ai_chance = { 
+			factor = 75
+		}
+		 trigger = {
+		 tag = ELL
+		 }
+		 BIM = { country_event = { id = bim.12 days = 1 } }
+	 }
+	 option = {
+	     name = ell.12.b
+		 ai_chance = { 
+			factor = 25
+		}
+		 trigger = {
+		 tag = ELL
+		 }
+		 BIM = { country_event = { id = bim.13 days = 1 } }
+	 }
+}
+
+country_event = {
+     id = bim.12
+	 title = bim.12.t
+	 desc = bim.12.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = BIM
+	 }
+	  
+	 option = {
+	     name = bim.12.a
+		 trigger = {
+		 tag = BIM
+		 }
+		 TUR = { country_event = { id = turkey.3 days = 1 } }
+	 }
+}
+
+country_event = {
+     id = bim.13
+	 title = bim.13.t
+	 desc = bim.13.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = BIM
+	 }
+	  
+	 option = {
+	     name = bim.13.a
+		 trigger = {
+		 tag = BIM
+		 }
+		 create_wargoal = {
+			type = annex_everything
+			target = ELL
+		}
+	 }
+	 option = {
+	     name = bim.13.b
+		 trigger = {
+		 tag = BIM
+		 }
+		 add_political_power = 5
+	 }
+}
+
+country_event = {
+     id = ell.13
+	 title = ell.13.t
+	 desc = ell.13.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = ELL
+	 }
+	  
+	 option = {
+	     name = ell.13.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 transfer_state = 355
+		 transfer_state = 349
+		 transfer_state = 350
+		 transfer_state = 344
+		 transfer_state = 348
+		 transfer_state = 356
+	 }
+}
+
+country_event = {
+     id = bim.14
+	 title = bim.14.t
+	 desc = bim.14.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = BIM
+	 }
+	  
+	 option = {
+	     name = bim.14.a
+		 trigger = {
+		 tag = BIM
+		 }
+		 transfer_state = 343
+		 transfer_state = 347
+		 transfer_state = 49
+		 transfer_state = 346
+		 transfer_state = 345
+	 }
+}
+
+
+##############################OL JORDANIE###################################
+
+add_namespace = ola
+
+country_event = {
+     id = ola.0
+	 title = ola.0.t
+	 desc = ola.0.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = OLA
+	 }
+	  
+	 option = {
+	     name = ola.0.a
+		 trigger = {
+		 tag = OLA
+		 }
+		ENG = { country_event = { id = britain.26 days = 1} }
+	 }
+}
+
+country_event = {
+     id = ola.1
+	 title = ola.1.t
+	 desc = ola.1.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = OLA
+	 }
+	  
+	 option = {
+	     name = ola.1.a
+		 trigger = {
+		 tag = OLA
+		 }
+		transfer_state = 455
+	 }
+}
+
+
+##########################OLA SYRIE###########################################
+
+
+country_event = {
+     id = ola.2
+	 title = ola.2.t
+	 desc = ola.2.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = OLA
+	 }
+	  
+	 option = {
+	     name = ola.2.a
+		 trigger = {
+		 tag = OLA
+		 }
+		FRA = { country_event = { id = france.35 days = 1} }
+	 }
+}
+
+country_event = {
+     id = ola.3
+	 title = ola.3.t
+	 desc = ola.3.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = OLA
+	 }
+	  
+	 option = {
+	     name = ola.3.a
+		 trigger = {
+		 tag = OLA
+		 }
+		transfer_state = 680
+		transfer_state = 677
+		transfer_state = 554
+		transfer_state = 553
+	 }
+}
+
+
+
+####################OLA PALESTEIN################################
+
+
+country_event = {
+     id = ola.4
+	 title = ola.4.t
+	 desc = ola.4.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = OLA
+	 }
+	  
+	 option = {
+	     name = ola.4.a
+		 trigger = {
+		 tag = OLA
+		 }
+		ENG = { country_event = { id = britain.27 days = 1} }
+	 }
+}
+
+
+country_event = {
+     id = ola.5
+	 title = ola.5.t
+	 desc = ola.5.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = OLA
+	 }
+	  
+	 option = {
+	     name = ola.5.a
+		 trigger = {
+		 tag = OLA
+		 }
+		transfer_state = 454
+	 }
+}
+
+###########################OLA SINAI################################
+
+
+country_event = {
+     id = ola.6
+	 title = ola.6.t
+	 desc = ola.6.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = OLA
+	 }
+	  
+	 option = {
+	     name = ola.6.a
+		 trigger = {
+		 tag = OLA
+		 }
+		ENG = { country_event = { id = britain.28 days = 1} }
+	 }
+}
+
+country_event = {
+     id = ola.7
+	 title = ola.7.t
+	 desc = ola.7.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = OLA
+	 }
+	  
+	 option = {
+	     name = ola.7.a
+		 trigger = {
+		 tag = OLA
+		 }
+		transfer_state = 453
+	 }
+}
+
+
+
+##############################OLA CAIRO##########################################
+
+
+country_event = {
+     id = ola.8
+	 title = ola.8.t
+	 desc = ola.8.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = OLA
+	 }
+	  
+	 option = {
+	     name = ola.8.a
+		 trigger = {
+		 tag = OLA
+		 }
+		ENG = { country_event = { id = britain.29 days = 1} }
+	 }
+}
+
+country_event = {
+     id = ola.9
+	 title = ola.9.t
+	 desc = ola.9.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = OLA
+	 }
+	  
+	 option = {
+	     name = ola.9.a
+		 trigger = {
+		 tag = OLA
+		 }
+		transfer_state = 446
+	 }
+}
+
+
+#############################KEV SINGAPOER##########################################
+
+add_namespace = kev
+
+country_event = {
+     id = kev.0
+	 title = kev.0.t
+	 desc = kev.0.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = KEV
+	 }
+	  
+	 option = {
+	     name = kev.0.a
+		 trigger = {
+		 tag = KEV
+		 }
+		MAL = { country_event = { id = mal.0 days = 1} }
+	 }
+}
+
+country_event = {
+     id = kev.1
+	 title = kev.1.t
+	 desc = kev.1.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = KEV
+	 }
+	  
+	 option = {
+	     name = kev.1.a
+		 trigger = {
+		 tag = KEV
+		 }
+		transfer_state = 336
+	 }
+}
+
+add_namespace = mal
+
+country_event = {
+     id = mal.0
+	 title = mal.0.t
+	 desc = mal.0.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = MAL
+	 }
+	  
+	 option = {
+	     name = mal.0.a
+		 trigger = {
+		 tag = MAL
+		 }
+		KEV = { country_event = { id = kev.1 days = 1} }
+	 }
+}
+
+
+##########################NOORD BORNEO################################
+
+
+country_event = {
+     id = kev.3
+	 title = kev.3.t
+	 desc = kev.3.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = KEV
+	 }
+	  
+	 option = {
+	     name = kev.3.a
+		 trigger = {
+		 tag = KEV
+		 }
+		MAL = { country_event = { id = mal.1 days = 1} }
+	 }
+}
+
+
+country_event = {
+     id = mal.1
+	 title = mal.1.t
+	 desc = mal.1.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = MAL
+	 }
+	  
+	 option = {
+	     name = mal.1.a
+		 trigger = {
+		 tag = MAL
+		 }
+		KEV = { country_event = { id = kev.4 days = 1} }
+	 }
+}
+
+
+country_event = {
+     id = kev.4
+	 title = kev.4.t
+	 desc = kev.4.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = KEV
+	 }
+	  
+	 option = {
+	     name = kev.4.a
+		 trigger = {
+		 tag = KEV
+		 }
+		transfer_state = 333
+	 }
+}
+
+
+
+############################KEV SUMATRA####################################
+
+country_event = {
+     id = kev.5
+	 title = kev.5.t
+	 desc = kev.5.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = KEV
+	 }
+	  
+	 option = {
+	     name = kev.5.a
+		 trigger = {
+		 tag = KEV
+		 }
+		INS = { country_event = { id = ins.0 days = 1} }
+	 }
+}
+
+
+add_namespace = ins
+
+country_event = {
+     id = ins.0
+	 title = ins.0.t
+	 desc = ins.0.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = INS
+	 }
+	  
+	 option = {
+	     name = ins.0.a
+		 trigger = {
+		 tag = INS
+		 }
+		KEV = { country_event = { id = kev.6 days = 1} }
+	 }
+}
+
+country_event = {
+     id = kev.6
+	 title = kev.6.t
+	 desc = kev.6.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = KEV
+	 }
+	  
+	 option = {
+	     name = kev.6.a
+		 trigger = {
+		 tag = KEV
+		 }
+		transfer_state = 672
+	 }
+}
+
+
+#######################KEVIN CEYLON#######################################
+
+country_event = {
+     id = kev.7
+	 title = kev.7.t
+	 desc = kev.7.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = KEV
+	 }
+	  
+	 option = {
+	     name = kev.7.a
+		 trigger = {
+		 tag = KEV
+		 }
+		ENG = { country_event = { id = britain.33 days = 1} }
+	 }
+}
+
+country_event = {
+     id = kev.8
+	 title = kev.8.t
+	 desc = kev.8.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = KEV
+	 }
+	  
+	 option = {
+	     name = kev.8.a
+		 trigger = {
+		 tag = KEV
+		 }
+		transfer_state = 422
+	 }
+}
+
+
+########################KEV ANDAMAN###################
+
+country_event = {
+     id = kev.9
+	 title = kev.9.t
+	 desc = kev.9.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = KEV
+	 }
+	  
+	 option = {
+	     name = kev.9.a
+		 trigger = {
+		 tag = KEV
+		 }
+		ENG = { country_event = { id = britain.34 days = 1} }
+	 }
+}
+
+country_event = {
+     id = kev.10
+	 title = kev.10.t
+	 desc = kev.10.d
+	 picture = GFX_report_event_generic_read_write
+	 is_triggered_only = yes
+	 
+	 #wil je deze event meerdere keren laten komen of een keer?
+	 fire_only_once = yes #yes/no
+	 
+	 	 trigger = { 
+		 tag = KEV
+	 }
+	  
+	 option = {
+	     name = kev.10.a
+		 trigger = {
+		 tag = KEV
+		 }
+		transfer_state = 733
+	 }
+}
+
+
+
+
+######################################################################
+##################### Elliot's overige events #########################
+######################################################################
+
+
+country_event = {
+     id = ell.14
+	 title = ell.14.t
+	 desc = ell.14.d
+	 picture = GFX_report_event_generic_rally2
+	 is_triggered_only = no
+	 fire_only_once = yes 
+	 
+	 trigger = { 
+		 tag = ELL
+		 has_government = communism
+	 }
+	 
+	 option = {
+	     name = ell.14.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 set_province_name = { id = 7661 name = "Elliotgrad"}
+	 }
+	 option = {
+	     name = ell.14.b
+		 trigger = {
+		 tag = ELL
+		 }
+		 add_stability = -0.02
+	 }
+}
+
+
+country_event = {
+     id = ell.15
+	 title = ell.15.t
+	 desc = ell.15.d
+	 picture = GFX_report_event_poland_rejects
+	 is_triggered_only = no
+	 fire_only_once = yes 
+	 
+	 trigger = { 
+		 tag = ELL
+		 has_government = communism
+	 }
+	 
+	 option = {
+	     name = ell.15.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 TUR = { country_event = { id = turkey.4 days = 1} }
+	 }
+}
+
+country_event = {
+     id = ell.16
+	 title = ell.16.t
+	 desc = ell.16.d
+	 picture = GFX_report_event_poland_rejects
+	 is_triggered_only = no
+	 fire_only_once = yes 
+	 
+	 trigger = { 
+		 tag = ELL
+	 }
+	 
+	 option = {
+	     name = ell.16.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 add_resource = {
+				type = chromium
+				amount = 20
+				state = 353
+			}
+	 }
+}
+
+#######################DEAL MET TIMO#####################################
+
+country_event = {
+     id = ell.17
+	 title = ell.17.t
+	 desc = ell.17.d
+	 picture = GFX_report_event_poland_rejects
+	 is_triggered_only = no
+	 fire_only_once = yes 
+	 
+	 trigger = { 
+		 tag = ELL
+	 }
+	 
+	 option = {
+	     name = ell.17.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 BIM = { country_event = { id = bim.15 days = 1} }
+	 }
+}
+
+country_event = {
+     id = bim.15
+	 title = bim.15.t
+	 desc = bim.15.d
+	 picture = GFX_report_event_poland_rejects
+	 is_triggered_only = no
+	 fire_only_once = yes 
+	 
+	 trigger = { 
+		 tag = BIM
+	 }
+	 
+	 option = {
+	     name = bim.15.a
+		 trigger = {
+		 tag = BIM
+		 }
+		 ELL = { country_event = { id = ell.18 days = 1} }
+		 	 add_resource = {
+				type = oil
+				amount = 12
+				state = 353
+			}
+
+	 }
+
+	 option = {
+	     name = bim.15.b
+		 trigger = {
+		 tag = BIM
+		 }
+		 ELL = { country_event = { id = ell.19 days = 1} }
+	 }
+}
+
+country_event = {
+     id = ell.18
+	 title = ell.18.t
+	 desc = ell.18.d
+	 picture = GFX_report_event_poland_rejects
+	 is_triggered_only = no
+	 fire_only_once = yes 
+	 
+	 trigger = { 
+		 tag = ELL
+	 }
+	 
+	 option = {
+	     name = ell.18.a
+		 trigger = {
+		 tag = ELL
+		 }
+		 add_resource = {
+				type = aluminium
+				amount = 16
+				state = 353
+			}
+	 }
+}
+
+country_event = {
+     id = ell.19
+	 title = ell.19.t
+	 desc = ell.19.d
+	 picture = GFX_report_event_poland_rejects
+	 is_triggered_only = no
+	 fire_only_once = yes 
+	 
+	 trigger = { 
+		 tag = ELL
+	 }
+	 
+	 option = {
+	     name = ell.19.a
+		 trigger = {
+		 tag = ELL
+		 }
+
+	 }
+}
+
+
+######################ZWARTE ZATERDAG###############################
+
+country_event = {
+     id = ell.20
+	 title = ell.20.t
+	 desc = ell.20.d
+	 picture = GFX_report_event_lithuania_army
+	 is_triggered_only = no
+	 fire_only_once = yes 
+	 
+	 trigger = { 
+		 tag = ELL
+		 has_completed_focus = {
+		 	ELL_zwarte_zaterdag
+		 }
+	 }
+	 
+	 option = {
+	     name = ell.20.a
+		 trigger = {
+		 tag = ELL
+		 }
+		set_politics = {
+    		parties = {
+				democratic = { 
+					popularity = 20
+				}
+
+				fascism = {
+					popularity = 64
+				}
+		
+				communism = {
+					popularity = 8
+				}
+		
+				neutrality = { 
+					popularity = 8
+				}
+			}
+	
+			ruling_party = fascism
+		}
+	 }
+}
+
+
+

@@ -1,0 +1,107 @@
+﻿division_template = {
+	name = "Infantrie Divisie"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+   		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+  		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Tank Divisie"				
+
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }		
+		light_armor = { x = 0 y = 1 }		
+		light_armor = { x = 1 y = 0 }
+		light_armor = { x = 1 y = 1 }
+	}
+	priority = 1
+}
+
+units = {
+	division = {
+		name = "Eerste Divisie"
+		location = 7531
+		division_template = "Infantrie Divisie"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		
+	}
+	division = {
+		name = "Tweede Divisie"
+		location = 12433
+		division_template = "Infantrie Divisie"
+		start_equipment_factor = 1
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "Derde Divisie"
+		location = 1185
+		division_template = "Infantrie Divisie"
+		start_equipment_factor = 1
+		start_experience_factor = 0.2
+
+	}
+	division = {
+	    name = "Vierde Divisie"
+		location = 7236
+		division_template = "Infantrie Divisie"
+		start_equipment_factor = 1
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "Vijfde Divisie"
+		location = 4075
+		division_template = "Infantrie Divisie"
+		start_equipment_factor = 1
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "Zesde Divisie"
+		location = 4401
+		division_template = "Infantrie Divisie"
+		start_equipment_factor = 1
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		name = "Zevende Divisie"
+		location = 7408
+		division_template = "Infantrie Divisie"
+		start_equipment_factor = 1
+		start_experience_factor = 0.2
+
+	}
+	division = {
+		#name = "Achtste Divisie"
+		location = 10438
+		division_template = "Infantrie Divisie"
+		start_equipment_factor = 1
+		start_experience_factor = 0.2
+
+	}
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "OLA"
+		}
+		requested_factories = 2
+		progress = 0.28
+		efficiency = 100
+	}
+}
