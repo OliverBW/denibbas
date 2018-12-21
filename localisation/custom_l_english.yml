@@ -1,0 +1,425 @@
+﻿l_english:
+
+welkom.0.t:0 "Welkom"
+welkom.0.d:0 "Welkom bij de Nibba's mod boys. Laat het feest beginnen XDDDD"
+welkom.0.a:0 "Ya yeet"
+welkom.0.b:0 "Boeit iemand lol"
+
+welkom.1.t:0 "Welkom"
+welkom.1.d:0 "Welkom bij de Nibba's mod boys. Laat het feest beginnen XDDDD"
+welkom.1.a:0 "Ya yeet"
+welkom.1.b:0 "Boeit iemand lol"
+
+welkom.2.t:0 "Welkom"
+welkom.2.d:0 "Welkom bij de Nibba's mod boys. Laat het feest beginnen XDDDD"
+welkom.2.a:0 "Ya yeet"
+welkom.2.b:0 "Boeit iemand lol"
+
+welkom.3.t:0 "Welkom"
+welkom.3.d:0 "Welkom bij de Nibba's mod boys. Laat het feest beginnen XDDDD"
+welkom.3.a:0 "Ya yeet"
+welkom.3.b:0 "Boeit iemand lol"
+
+britain.24.t:0 "Freedom wants to join the Allies"
+britain.24.d:0 "The people of free want to join the allies"
+britain.24.a:0 "Come in"
+
+germany.129.t:0 "Freedom wants to join the Axis"
+germany.129.d:0 "The people of free want to join the axis"
+germany.129.a:0 "Come in"
+
+soviet.63.t:0 "Freedom wants to join the Comintern"
+soviet.63.d:0 "The people of free want to join the Comintern"
+soviet.63.a:0 "Come in"
+
+soviet.66.t:0 "Olandia wants to join the Comintern"
+soviet.66.d:0 "The people of Olandia want to join the Comintern"
+soviet.66.a:0 "Come in"
+
+germany.130.t:0 "Olandia wants to join the Axis"
+germany.130.d:0 "The people of Olandia want to join the axis"
+germany.139.a:0 "Come in"
+
+britain.30.t:0 "Olandia wants to join the Allies"
+britain.30.d:0 "The people of Olandia want to join the allies"
+britain.30.a:0 "Come in"
+
+britain.31.t:0 "TUGF wants to join the Allies"
+britain.31.d:0 "The people of TUGF want to join the allies"
+britain.31.a:0 "Come in"
+
+germany.131.t:0 "TUGF wants to join the Axis"
+germany.131.d:0 "The people of TUGF want to join the axis"
+germany.131.a:0 "Come in"
+
+soviet.67.t:0 "TUGF wants to join the Comintern"
+soviet.67.d:0 "The people of TUGF want to join the Comintern"
+soviet.67.a:0 "Come in"
+
+soviet.68.t:0 "Thiccies wants to join the Comintern"
+soviet.68.d:0 "The people of Thicc want to join the Comintern"
+soviet.68.a:0 "Come in"
+
+germany.132.t:0 "Thiccies wants to join the Axis"
+germany.132.d:0 "The people of Thicc want to join the axis"
+germany.132.a:0 "Come in"
+
+britain.32.t:0 "Thicc wants to join the Allies"
+britain.32.d:0 "The people of Thicc want to join the allies"
+britain.32.a:0 "Come in"
+
+################TEHRAN ELL###############
+
+ell.0.t:0 "Eis de staat Tehran"
+ell.0.d:0 "We sturen een ultimatum naar de Iraanse regering en we eisen de staat Tehran van hun. Ze zullen dit wel moeten accepteren!"
+ell.0.a:0 "Sturen maar"
+
+per.1.t:0 "Elliot Baudeweyns eist onze staat!"
+per.1.d:0 "Elliot Baudeweyns heeft ons een ultimatum gestuurd."
+per.1.a:0 "We kunnen niks anders..."
+
+ell.1.t:0 "Iran accepteerd!"
+ell.1.d:0 "De Iraanse regering heeft ons hun staat gegeven."
+ell.1.a:0 "We worden alleen maar sterker"
+
+################HAMADAM ELL################
+
+ell.2.t:0 "Eis de staat Hamadam"
+ell.2.d:0 "We sturen een ultimatum naar de Iraanse regering en we eisen de staat Hamadam van hun. Ze zullen dit wel moeten accepteren!"
+ell.2.a:0 "Sturen die handel"
+
+per.2.t:0 "Elliot Baudeweyns eist onze staat!"
+per.2.d:0 "Elliot Baudeweyns heeft ons een ultimatum gestuurd."
+per.2.a:0 "We kunnen niks anders..."
+
+ell.3.t:0 "Iran accepteerd!"
+ell.3.d:0 "De Iraanse regering heeft ons hun staat gegeven."
+ell.3.a:0 "We worden alleen maar sterker"
+
+################KRASNODAR ELL################
+
+ell.4.t:0 "Eis de staat Krasnodar"
+ell.4.d:0 "We sturen een ultimatum naar de Russische regering en we eisen de staat Krasnodar van hun. Ze zullen dit wel moeten accepteren!"
+ell.4.a:0 "Sturen die handel"
+
+soviet.64.t:0 "Elliot Baudeweyns eist onze staat!"
+soviet.64.d:0 "Elliot Baudeweyns heeft ons een ultimatum gestuurd."
+soviet.64.a:0 "We kunnen niks anders..."
+
+ell.5.t:0 "Rusland accepteerd!"
+ell.5.d:0 "De Russische regering heeft ons hun staat gegeven."
+ell.5.a:0 "We worden alleen maar sterker"
+
+################CRIMEA ELL####################
+
+ell.6.t:0 "Eis de staat Crimea"
+ell.6.d:0 "We sturen een ultimatum naar de Russische regering en we eisen de staat Crimea van hun. Ze zullen dit wel moeten accepteren!"
+ell.6.a:0 "Sturen die handel"
+
+soviet.65.t:0 "Elliot Baudeweyns eist onze staat!"
+soviet.65.d:0 "Elliot Baudeweyns heeft ons een ultimatum gestuurd."
+soviet.65.a:0 "We kunnen niks anders..."
+
+ell.7.t:0 "Rusland accepteerd!"
+ell.7.d:0 "De Russische regering heeft ons hun staat gegeven."
+ell.7.a:0 "We worden alleen maar sterker"
+
+#################TURKIJE EL EN TIMO#############
+
+ell.8.t:0 "Split Turkije tussen jou en Timo"
+ell.8.d:0 "We vragen aan Timo of hij mee wilt in ons idee"
+ell.8.a:0 "Stuur het bericht naar Timo"
+
+bim.0.t:0 "Elliot vraagt of hij mee Turkije wilt splitten"
+bim.0.d:0 "De regering van Elliot Baudeweyns heeft zojuist een bericht naar ons verzonden en gevraagd of we mee Turkije willen splitten, willen we dit doen?"
+bim.0.a:0 "We doen zeker mee"
+bim.0.b:0 "Zeker niet (kan tot oorlog leiden)"
+
+ell.9.t:0 "Timo doet mee!"
+ell.9.d:0 "Timo heeft geaccepteerd en we sturen nu het bericht naar Turkije"
+ell.9.a:0 "Stuur het bericht"
+
+ell.10.t:0 "Timo doet niet mee!"
+ell.10.d:0 "Timo heeft het aanbod geweigerd, hier zullen ze voor boeten."
+ell.10.a:0 "Mobilizeer"
+ell.10.b:0 "We willen nu geen oorlog"
+
+ell.11.t:0 "Turkije accepteert"
+ell.11.d:0 "Turkije heeft geaccepteert dat ze worden geannexeerd door ons en Timo."
+ell.11.a:0 "Ze konden toch niks anders"
+
+bim.2.t:0 "Turkije accepteert"
+bim.2.d:0 "Turkije heeft geaccepteert dat ze worden geannexeerd door ons en Elliot."
+bim.2.a:0 "Ze konden toch niks anders"
+
+turkey.2.t:0 "Timo en Elliot willen ons annexeren"
+turkey.2.d:0 "Wat moeten we doen? We kunnen niks..."
+turkey.2.a:0 "Accepteer het ultimatum"
+
+##################ALBANIË TIMO###################################
+
+bim.3.t:0 "Eis Albanië"
+bim.3.d:0 "We sturen een ultimatum naar de Albaneese regering en we eisen de annexatie van Albanië"
+bim.3.a:0 "Sturen die handel"
+
+alb.0.t:0 "Timo eist onze annexatie!"
+alb.0.d:0 "De regering van Timo eist dat we ons overgeven aan hun en ons laten annexeren."
+alb.0.a:0 "We kunnen niks anders..."
+
+bim.4.t:0 "Albanië accepteert"
+bim.4.d:0 "Albanië heeft geaccepteerd dat we hun annexeren."
+bim.4.a:0 "Kom maar binnen"
+
+##################BULGARIJE TIMO###################################
+
+bim.5.t:0 "Eis Bulgarije"
+bim.5.d:0 "We sturen een ultimatum naar de Bulgaarse regering en we eisen de annexatie van Bulgarije"
+bim.5.a:0 "Sturen die handel"
+
+bulgaria.6.t:0 "Timo eist onze annexatie!"
+bulgarie.6.d:0 "De regering van Timo eist dat we ons overgeven aan hun en ons laten annexeren."
+bulgaria.6.a:0 "we kunnen niks anders"
+
+bim.6.t:0 "Bulgarije accepteerd"
+bim.6.d:0 "Bulgarije heeft geaccepteerd dat we hun annexeren."
+bim.6.a:0 "Goeien, binnen komen"
+
+##################MACEDONIE TIMO####################################
+
+bim.7.t:0 "Eis Macedonië"
+bim.7.d:0 "We sturen een ultimatum naar de Yugoslavische regering en we eisen de annexatie van de staat Macedonië"
+bim.7.a:0 "Stuur het ultimatum"
+
+yugoslavia.10.t:0 "Timo eist Macedonië!"
+yugoslavia.10.d:0 "De regering van Timo eist dat we onze staat overgeven aan hun en de staat te laten annexeren."
+yugoslavia.10.a:0 "We kunnen niks anders..."
+
+bim.8.t:0 "Joegoslavië accepteert"
+bim.8.d:0 "De Joegaslavische regering accepteerd dat we hun staat annexeren."
+bim.8.a:0 "A fine addition to my collection"
+
+##################CYPRUS TIMO###################################
+
+bim.9.t:0 "Eis Cyprus"
+bim.9.d:0 "We sturen een ultimatum naar de Britse regering en we eisen de annexatie van Cyprus"
+bim.9.a:0 "Sturen die handel"
+
+britain.25.t:0 "Timo eist Cyprus!"
+britain.25.d:0 "De regering van Timo eist dat we Cyprus aan hun geven."
+britain.25.a:0 "Wat valt er te verliezen"
+
+bim.10.t:0 "Engeland accepteert"
+bim.10.d:0 "De Engelse geven ons Cyprus."
+bim.10.a:0 "Meer land is altijd goed"
+
+###################TIMO EN ELL TURKIJE 2########################
+
+bim.11.t:0 "Split Turkije tussen ons en Elliot"
+bim.11.d:0 "We vragen aan Elliot of hij mee wilt doen aan ons idee"
+bim.11.a:0 "Stuur het bericht"
+
+ell.12.t:0 "Timo vraagt aan ons of je mee Turkije wilt delen"
+ell.12.d:0 "Timo heeft een brief gestuurd waarin hij zei dat hij Turkije wilde delen, en of jij dat ook wilde."
+ell.12.a:0 "We doen het"
+ell.12.b:0 "We doen het niet (kan oorlog veroorzaken)"
+
+bim.13.t:0 "Elliot weigerd"
+bim.13.d:0 "Elliot heeft geweigerd en wil niet mee doen, wat zullen we doen?"
+bim.13.a:0 "Mobilizeer"
+bim.13.b:0 "We willen nu geen oorlog"
+
+bim.12.t:0 "Elliot doet mee"
+bim.12.d:0 "Elliot wil mee doen aan het idee"
+bim.12.a:0 "Mooi, we sturen het ultimatum naar Turkije"
+
+turkey.3.t:0 "Timo en Elliot willen ons annexeren!"
+turkey.3.d:0 "Wat moeten we doen? We kunnen niks..."
+turkey.3.a:0 "Accepteer het ultimatum"
+
+ell.13.t:0 "Turkije accepteert"
+ell.13.d:0 "Turkije heeft geaccepteert dat ze worden geannexeerd door ons en Timo."
+ell.13.a:0 "Ze konden toch niks anders"
+
+bim.14.t:0 "Turkije accepteert"
+bim.14.d:0 "Turkije heeft geaccepteert dat ze worden geannexeerd door ons en Elliot."
+bim.14.a:0 "Ze konden toch niks anders"
+
+###################OLIVER JORDANIE################################
+
+ola.0.t:0 "Eis Jordanie"
+ola.0.d:0 "We sturen een ultimatum naar Engeland voor Jordanie."
+ola.0.a:0 "Sturen die handel"
+
+ola.1.t:0 "Engeland Accepteert"
+ola.1.d:0 "We krijgen controle over Jordanie."
+ola.1.a:0 "Mooi"
+
+britain.26.t:0 "Olandia Eist Jordanie"   
+britain.26.d:0 "We hebben een ultimatum binnen gekregen van Olandia"
+britain.26.a:0 "We kunnen niks anders"
+
+####################OLIVER SYRIE##############################
+
+ola.2.t:0 "Eis Syrie"
+ola.2.d:0 "We sturen een ultimatum naar Frankrijk voor Syrie."
+ola.2.a:0 "Sturen die handel"
+
+france.35.t:0 "Olandia Eist Syrie"   
+france.35.d:0 "We hebben een ultimatum binnen gekregen van Olandia"
+france.35.a:0 "We kunnen niks anders"
+
+ola.3.t:0 "Frankrijk Accepteert"
+ola.3.d:0 "We krijgen controle over Syrie."
+ola.3.a:0 "Mooi"
+
+######################OLIVER PALESTINA###########################
+
+ola.4.t:0 "Eis Palestina"
+ola.4.d:0 "We sturen een ultimatum naar Engeland voor Palestina."
+ola.4.a:0 "Sturen die handel"
+
+britain.27.t:0 "Olandia Eist Palestina"   
+britain.27.d:0 "We hebben een ultimatum binnen gekregen van Olandia"
+britain.27.a:0 "We kunnen niks anders"
+
+ola.5.t:0 "Engeland Accepteert"
+ola.5.d:0 "We krijgen controle over Palestina."
+ola.5.a:0 "Mooi"
+
+####################OLIVER SINAI##############################
+
+ola.6.t:0 "Eis Sinai"
+ola.6.d:0 "We sturen een ultimatum naar Engeland voor Sinai."
+ola.6.a:0 "Sturen die handel"
+
+britain.28.t:0 "Olandia Eist Sinai"   
+britain.28.d:0 "We hebben een ultimatum binnen gekregen van Olandia"
+britain.28.a:0 "We kunnen niks anders"
+
+ola.7.t:0 "Engeland Accepteert"
+ola.7.d:0 "We krijgen controle over Sinai."
+ola.7.a:0 "Mooi"
+
+#####################OLIVER CIARO#################################
+
+ola.8.t:0 "Eis Ciaro"
+ola.8.d:0 "We sturen een ultimatum naar Engeland voor Ciaro."
+ola.8.a:0 "Sturen die handel"
+
+britain.29.t:0 "Olandia Eist Ciaro"   
+britain.29.d:0 "We hebben een ultimatum binnen gekregen van Olandia"
+britain.29.a:0 "We kunnen niks anders"
+
+ola.9.t:0 "Engeland Accepteert"
+ola.9.d:0 "We krijgen controle over Ciaro."
+ola.9.a:0 "Mooi"
+
+####################KEVIN SINGAPOER####################################
+
+kev.0.t:0 "Eis Singapoer"
+kev.0.d:0 "We sturen een ultimatum naar Maleisie voor Singapoer"
+kev.0.a:0 "Sturen die handel"
+
+mal.0.t:0 "Kevin Eist Singapoer"
+mal.0.d:0 "We hebben een ultimatum binnen gekregen van Kevin"
+mal.0.a:0 "We kunnen niks anders"
+
+kev.1.t:0 "Maleisie Accepteert"
+kev.1.d:0 "We krijgen controle over Singapoer"
+kev.1.a:0 "Mooi"
+
+###################KEVIN NOORD BORNEO#############################
+
+kev.3.t:0 "Eis Noord Borneo"
+kev.3.d:0 "We sturen een ultimatum naar Maleisie voor Noord Borneo"
+kev.3.a:0 "Sturen die handel"
+
+mal.1.t:0 "Kevin Eist Noord Borneo"
+mal.1.d:0 "We hebben een ultimatum binnen gekregen van Kevin"
+mal.1.a:0 "We kunnen niks anders"
+
+kev.4.t:0 "Maleisie Accepteert"
+kev.4.d:0 "We krijgen controle over Noord Borneo"
+kev.4.a:0 "Mooi"
+
+######################KEVIN ANDAMAN#############################
+
+kev.9.t:0 "Eis Andaman"
+kev.9.d:0 "We sturen een ultimatum naar Engeland voor Andaman"
+kev.9.a:0 "Sturen die handel"
+
+britain.34.t:0 "Kevin Eist Andaman"
+britain.34.d:0 "We hebben een ultimatum binnen gekregen van Kevin"
+britain.34.a:0 "We kunnen niks anders"
+
+kev.10.t:0 "Engeland Accepteert"
+kev.10.d:0 "We krijgen controle over Andaman"
+kev.10.a:0 "Mooi"
+
+########################KEVIN CEYLON#############################
+
+kev.7.t:0 "Eis Ceylon"
+kev.7.d:0 "We sturen een ultimatum naar Engeland voor Ceylon"
+kev.7.a:0 "Sturen die handel"
+
+britain.33.t:0 "Kevin Eist Ceylon"
+britain.33.d:0 "We hebben een ultimatum binnen gekregen van Kevin"
+britain.33.a:0 "We kunnen niks anders"
+
+kev.8.t:0 "Engeland Accepteert"
+kev.8.d:0 "We krijgen controle over Ceylon"
+kev.8.a:0 "Mooi"
+
+#######################KEVIN SUMATRA###########################
+
+kev.5.t:0 "Eis Sumatra"
+kev.5.d:0 "We sturen een ultimatum naar Nederlands Indie voor Sumatra"
+kev.5.a:0 "Sturen die handel"
+
+ins.0.t:0 "Kevin Eist Sumatra"
+ins.0.d:0 "We hebben een ultimatum binnen gekregen van Kevin"
+ins.0.a:0 "We kunnen niks anders"
+
+kev.6.t:0 "Nederlands Indie Accepteert"
+kev.6.d:0 "We krijgen controle over Sumatra"
+kev.6.a:0 "Mooi"
+
+#####################ELLIOT OVERIG#############################
+
+ell.14.t:0 "Het Hernoemen Van Onze Vuile Kapitalistische Stadsnaam"
+ell.14.d:0 "Nu wij een communistisch land zijn, moeten we onze stad hernoemen. We kunnen niet langer Libertania gebruiken."
+ell.14.a:0 "We doen het"
+ell.14.b:0 "Nee, we houden het zo"
+
+ell.15.t:0 "Een Deal Met Turkije"
+ell.15.d:0 "We sturen een bericht naar de Turkse regering om een handel deal af te sluiten."
+ell.15.a:0 "Sturen maar"
+
+ell.16.t:0 "Turkije Accepteert!"
+ell.16.d:0 "De Turkse regering heeft ons offer geaccepteerd."
+ell.16.a:0 "Dit helpt"
+
+turkey.4.t:0 "Een Offer Van Elliot"
+
+ell.17.t:0 "Een Deal Met Timo"
+ell.17.d:0 "We sturen een bericht naar Timo om een grondstof deal af te sluiten."
+ell.17.a:0 "Laten we hopen dat ze accepteren"
+
+bim.15.t:0 "Een Offer Van Elliot"
+bim.15.d:0 "Elliot heeft ons een offer gestuurd voor een deal van grondstoffen. Accepteren we?"
+bim.15.a:0 "We doen het"
+bim.15.b:0 "Nah"
+
+ell.18.t:0 "Timo Accepteert!"
+ell.18.d:0 "Timo heeft ons offer geaccepteerd."
+ell.18.a:0 "Zeker goeien"
+
+ell.19.t:0 "Timo weigert!"
+ell.19.d:0 "We hebben zojuist een bericht binnen gekregen dat Timo ons offer heeft geweigerd. Hoe durven ze?"
+ell.19.a:0 "Tja"
+
+#####################################ZWARTE ZATERDAG#########################################
+
+ell.20.t:0 "Zwarte Zaterdag"
+ell.20.d:0 "Het is tijd om een staatsgreep uit te voeren. Voorwaarts!"
+ell.20.a:0 "Op naar het parlement gebouw"
